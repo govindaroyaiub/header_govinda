@@ -1,0 +1,376 @@
+
+.dynamicAd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40rem 20rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    height: 100vh;
+    background-color: $white-color;
+
+        @include responsive(desktop-xl) {
+            height: auto;
+        }
+
+        @include responsive(desktop-xxl) {
+            height: auto;
+        }
+
+        @include responsive(desktop-lg) {
+            height: auto;
+        }
+
+        @include responsive(laptop-xl) {
+            height: 100vh;
+        }
+
+        @include responsive(laptop-lg) {
+            padding: 10rem 15rem;
+        }
+
+        @include responsive(laptop-md) {
+            padding: 10rem 12rem;
+        }
+
+        @include responsive(laptop-sm) {
+            padding: 10rem 10rem;
+            height: 80vh;
+        }
+
+        @include responsive(laptop-xs) {
+            padding: 10rem 8rem;
+            margin-top: 0rem;
+            height: 61vh;
+        }
+
+        @include responsive(tablet-land) {
+            padding: 5rem 8rem;
+            margin-top: 0rem;
+            padding-bottom: 13.5rem;
+            margin-bottom: 8.5rem;
+            height: auto;
+        }
+
+        @include responsive(mobile-land) {
+            padding: 5rem 3rem;
+            margin-top: 0rem;
+            padding-bottom: 13.5rem;
+            margin-bottom: 8.5rem;
+            height: auto;
+        }
+
+        @include responsive(mobile-port) {
+            padding: 3.5rem 2rem;
+            margin-top: 0rem;
+            padding-bottom: 0;
+            margin-bottom: 8.5rem;
+            height: auto;
+        }
+
+
+
+    &__images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 404px;
+        gap: 1rem;
+
+            @include responsive(laptop-xl) {
+                height: 334px;
+            }
+
+            @include responsive(laptop-md) {
+                height: 280px;
+            }
+
+            @include responsive(laptop-sm) {
+                height: 230px;
+            }
+
+            @include responsive(laptop-xs) {
+                height: 192px;
+            }
+
+
+        &--one {
+            position: relative;
+            width: 252px;
+
+                @include responsive(laptop-xl) {
+                    width: 210px;
+                }
+
+                @include responsive(laptop-md) {
+                    width: 180px;
+                }
+
+                @include responsive(laptop-sm) {
+                    width: 150px;
+                }
+
+                @include responsive(laptop-xs) {
+                    width: 130px;
+                }
+
+                @include responsive(tablet-land) {
+                    width: 150px;
+                }
+
+                @include responsive(mobile-port) {
+                    width: 90px;
+                }
+
+
+
+            &__dot {
+              opacity: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                    @include responsive(laptop-xl) {
+                        width: 100%;
+                    }
+            }
+
+            
+        }
+
+        &--two {
+            position: relative;
+            width: 252px;
+
+                @include responsive(laptop-xl) {
+                    width: 210px;
+                }
+
+                @include responsive(laptop-md) {
+                    width: 180px;
+                }
+
+                @include responsive(laptop-sm) {
+                    width: 150px;
+                }
+                
+                @include responsive(laptop-xs) {
+                    width: 130px;
+                }
+
+                @include responsive(tablet-land) {
+                    width: 150px;
+                }
+
+                @include responsive(mobile-port) {
+                    width: 90px;
+                }
+
+
+            &__dot {
+              opacity: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                    @include responsive(laptop-xl) {
+                        width: 100%;
+                    }
+            }
+        }
+
+        &--three {
+            position: relative;
+            width: 252px;
+
+                @include responsive(laptop-xl) {
+                    width: 210px;
+                }
+
+                @include responsive(laptop-md) {
+                    width: 180px;
+                }
+
+                @include responsive(laptop-sm) {
+                    width: 150px;
+                }
+
+                @include responsive(laptop-xs) {
+                    width: 130px;
+                }
+
+                @include responsive(tablet-land) {
+                    width: 150px;
+                }
+
+                @include responsive(mobile-port) {
+                    width: 90px;
+                }
+
+
+            &__dot {
+              opacity: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                    @include responsive(laptop-xl) {
+                        width: 100%;
+                    }
+            }
+        }
+
+    }
+
+    // &__ams_dot {
+    //     position: absolute;
+    //     top: 0;
+
+    // }
+
+    &__heading {
+        // display: inline-block;
+        background-image: url('../assets/Dynamic_ads.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 120%;
+
+        @include responsive(laptop-md) {
+            margin-bottom: 3rem;
+        }
+
+        @include responsive(laptop-xs) {
+            margin-bottom: 2rem;
+        }
+
+        @include responsive(mobile-port) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        @include responsive(tablet-land) {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            text-align: center;
+        }
+
+        @include responsive(mobile-port) {
+            min-height: auto;
+            justify-content: center;
+        }
+    }
+
+    &__col1 {
+
+        @include responsive(tablet-land) {
+            width: 100%;
+            margin-bottom: 16rem !important;
+        }
+
+        @include responsive(mobile-port) {
+            margin-bottom: 10rem !important;
+        }
+
+        @include responsive(rc-port-340) {
+            margin-bottom: 10rem !important;
+        }
+
+        @include responsive(rc-port-298) {
+            margin-bottom: 10rem !important;
+        }
+
+        // @include responsive(laptop-xl) {
+        //     width: 40%!important;
+        //     margin-right: 13%!important;
+        // }
+
+    }
+
+    &__col2 {
+        display: flex;
+        justify-content: end;
+
+        @include responsive(tablet-land) {
+            justify-content: center;
+        }
+    }
+
+    &__ams--pic, &__rot--pic, &__den--pic {
+        position: absolute;
+        top: -22rem !important;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: rotateY(90deg);
+        transform-origin: bottom;
+        perspective: 150rem;
+        backface-visibility: hidden;
+
+            @include responsive(laptop-xl) {
+                top: -18rem !important;
+            }
+
+            @include responsive(laptop-md) {
+                top: -15rem !important;
+            }
+
+            @include responsive(laptop-sm) {
+                top: -13rem !important;
+            }
+
+            @include responsive(laptop-xs) {
+                top: -11.5rem !important;
+            }
+
+            @include responsive(tablet-land) {
+                top: -13rem !important;
+            }
+
+            @include responsive(mobile-port) {
+                top: -7.6rem !important;
+            }
+    }
+
+    &__ams--arrow, &__rot--arrow, &__den--arrow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -14px !important;
+        opacity: 0;
+
+            @include responsive(laptop-xl) {
+                width: 10% !important;
+            }
+
+            @include responsive(laptop-xs) {
+                width: 13% !important;
+            }
+    }
+
+
+    @include devider;
+
+}
+

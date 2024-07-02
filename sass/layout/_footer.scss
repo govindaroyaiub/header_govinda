@@ -1,0 +1,13 @@
+.footer {
+    padding: 3rem 0;
+
+    &__container {
+        max-width: 170rem;
+        padding: 0 10rem;
+        margin: 0 auto;
+
+        @include responsive(mobile-port) {
+            padding: 0 1rem;
+        }
+    }
+}

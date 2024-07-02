@@ -1,0 +1,701 @@
+
+.shadowAd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20rem;
+    height: 100vh;
+    background-color: $white-color;
+
+      @include responsive(desktop-xl) {
+        height: auto;
+      }
+
+      @include responsive(desktop-xxl) {
+        height: auto;
+      }
+
+      @include responsive(desktop-lg) {
+        height: auto;
+      }
+
+      @include responsive(laptop-xl) {
+        height: 100vh;
+      }
+
+      @include responsive(laptop-lg) {
+        padding: 10rem 15rem;
+      }
+
+      @include responsive(laptop-md) {
+        padding: 10rem 12rem;
+      }
+
+      @include responsive(laptop-sm) {
+        padding: 10rem 10rem;
+        height: 80vh;
+      }
+
+      @include responsive(laptop-xs) {
+        padding: 10rem 8rem;
+        height: 70vh;
+      }
+
+      @include responsive(tablet-land) {
+        padding: 5rem 8rem;
+        padding-bottom: 13.5rem;
+        height: auto;
+      }
+
+      @include responsive(mobile-land) {
+        padding: 5rem 0rem;
+        padding-bottom: 13.5rem;
+        height: auto;
+      }
+
+
+    &__heading {
+        display: inline-block;
+        background-image: url('../assets/Production_media.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+    }
+
+    &__row {
+      display: flex;
+      align-items: center;
+
+        @include responsive(tablet-land) {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          text-align: center;
+        }
+    }
+
+    &__col1 {
+      width: 50%;
+
+        @include responsive(tablet-land) {
+          width: 100%;
+          margin-bottom: 5rem;
+        }
+
+        @include responsive(mobile-land) {
+          width: 100%;
+          margin-bottom: 5rem;
+          padding: 0 3rem;
+        }
+      
+    } 
+
+    &__col2 {
+        width: 50%;
+        margin-left: 3%;
+
+          @include responsive(desktop-xl) {
+            display: flex;
+            justify-content: end;
+          }
+
+          @include responsive(desktop-xxl) {
+            display: flex;
+            justify-content: end;
+          }
+
+          @include responsive(desktop-lg) {
+            display: flex;
+            justify-content: end;
+            margin-left: 0%;
+          }
+
+          @include responsive(tablet-land) {
+            width: 100%;
+          }
+
+
+
+    }
+
+    &__sketchImage {
+      position: relative;
+      max-width: 850px;
+      max-height: 750px;
+      width: 120%;
+      height: 100%;
+      /* min-width: 650px; */
+      min-height: 810px;
+      background-image: url('../assets/shadowAd_canvas.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+        @include responsive(laptop-xl) {
+          min-height: 740px;
+        }
+
+        @include responsive(laptop-md) {
+          min-height: 626px;
+        }
+
+        @include responsive(laptop-xs) {
+          min-height: 477px;
+        }
+
+        @include responsive(tablet-land) {
+          min-height: 810px;
+        }
+
+        @include responsive(tablet-port) {
+          min-height: 676px;
+        }
+
+        @include responsive(mobile-land) {
+          min-height: 606px;
+          max-width: 650px;
+          margin: 0 auto;
+        }
+
+        @include responsive(mobile-port) {
+          min-height: 430px;
+          max-width: 430px;
+          margin: 0 auto;
+        }
+
+        @include responsive(rc-port-340) {
+          min-height: 362px;
+          max-width: 338px;
+          margin: 0 auto;
+        }
+        
+        @include responsive(rc-port-298) {
+          min-height: 342px;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+    }
+
+    // &__video {
+    //     width: 70%;
+
+    //     &--content {
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: fill;
+    //     }
+    // }
+
+    &__topSelect {
+        position: absolute;
+        top: -26px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        &--name {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+    }
+
+    &__selectWrap {
+      position: absolute;
+      bottom: -6.6rem;
+      left: -2px;
+      right: 0;
+      width: 100%;
+      height: 17%;
+      cursor: pointer;
+
+        @include responsive(desktop-xl) {
+          bottom: -8.6rem;
+        }
+    
+        @include responsive(desktop-lg) {
+          bottom: -8.6rem;
+        }     
+        
+        @include responsive(laptop-md) {
+          bottom: -5.6rem;
+        }
+
+        @include responsive(laptop-xs) {
+          bottom: -4.6rem;
+        }
+
+        @include responsive(tablet-land) {
+          bottom: -6.6rem;
+        }
+
+        @include responsive(tablet-port) {
+          bottom: -5.6rem;
+        }
+
+        @include responsive(mobile-port) {
+          bottom: -4.1rem;
+        }
+
+        @include responsive(rc-port-340) {
+          bottom: -3.2rem;
+        }
+    }
+
+    &__select {
+      position: relative;
+      display: flex;
+      justify-content: left;
+        // position: absolute;
+        // bottom: -66px;
+        // left: 0;
+        // right: 0;
+        // width: 100%;
+        // display: flex;
+        // justify-content: left;
+        // cursor: pointer;
+        // overflow: hidden;
+
+        &--btn {
+            width: 31.33%;
+            text-align: center;
+            padding: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-right: 3%;
+            border: 1px solid #000000;
+            border-radius: 4rem;
+
+            @include responsive(desktop-xl) {
+              padding: 0.5rem 1.4rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            @include responsive(desktop-xxl) {
+              padding: 0.5rem 1.4rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+                  
+            @include responsive(desktop-lg) {
+              padding: 0.5rem 1.4rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            @include responsive(laptop-xs) {
+              font-size: 11px;
+              padding: 0.3rem 1.4rem 0.4rem;
+            }
+
+            @include responsive(tablet-land) {
+              font-size: 13px;
+              padding: 8px;
+            }
+
+            @include responsive(tablet-port) {
+              font-size: 11px;
+              padding: 0.3rem 1.4rem 0.4rem;
+            }
+
+            @include responsive(rc-port-340) {
+              font-size: 10px;
+              padding: 0.3rem 1.4rem 0.4rem;
+              margin-right: 4%;
+            }
+            
+            @include responsive(rc-port-298) {
+              font-size: 8px;
+              padding: 0.3rem 1.4rem 0.4rem;
+              margin-right: 4%;
+            }
+        }
+
+
+
+        &--btn:last-child {
+          margin-right: 0;
+        }
+
+        &--one, &--two, &--three {
+          border: 1px solid #555;
+
+            &::after {
+              content: "";
+              background-image: url('../assets/shadow_btn.png');
+              background-size: contain;
+              display: block;
+              height: 100%;
+              width: 31.33%;
+              position: absolute;
+              border: 1px solid #555;
+              border-radius: 4rem;
+              top: 0px;
+              left: 0;
+              z-index: -1;
+              transform: translate(5px, 5px);
+
+                @include responsive(laptop-xs) {
+                  background-image: url('../assets/shadow_btn3.png');
+                }
+
+                @include responsive(tablet-land) {
+                  background-image: url('../assets/shadow_btn.png');
+                }
+
+                @include responsive(mobile-port) {
+                  background-image: url('../assets/shadow_btn3.png');
+                }
+
+            }
+        }
+
+
+        &--one {
+          background: linear-gradient(41deg, #f3cac7, #7d91ab);
+          // color: #ffffff;
+          color: #000000;
+
+          &::after {
+            left: 0rem;
+                        
+              @include responsive(rc-port-298) {
+                left: -0.3rem;
+              }
+          }
+
+        }
+
+        &--two {
+          background: linear-gradient(41deg, #ffffff, #ffffff);
+          color: #000000;
+
+          &::after {
+            left: 16rem;
+
+              @include responsive(laptop-md) {
+                left: 13rem;
+              }
+
+              @include responsive(laptop-xs) {
+                left: 9.8rem;
+              }
+
+              @include responsive(tablet-land) {
+                left: 16rem;
+              }
+
+              @include responsive(tablet-port) {
+                left: 9.4rem;
+              }
+
+              @include responsive(mobile-port) {
+                left: 9.4rem;
+              }
+              
+              @include responsive(rc-port-340) {
+                left: 7.6rem;
+              }
+                            
+              @include responsive(rc-port-298) {
+                left: 7.3rem;
+              }
+          }
+        }
+
+        &--three {
+          background: linear-gradient(41deg, #ffffff, #ffffff);
+          color: #000000;
+
+          &::after {
+            left: 32rem;
+
+              @include responsive(laptop-md) {
+                left: 25.7rem;
+              }
+
+              @include responsive(laptop-xs) {
+                left: 19.7rem;
+              }
+
+              @include responsive(tablet-land) {
+                left: 32rem;
+              }
+
+              @include responsive(tablet-port) {
+                left: 18.8rem;
+              }
+
+              @include responsive(mobile-port) {
+                left: 18.8rem;
+              }
+
+              @include responsive(rc-port-340) {
+                left: 15.4rem;
+              }
+                            
+              @include responsive(rc-port-298) {
+                left: 14.7rem;
+              }
+              
+          }
+        }
+
+      
+    }
+
+
+    // #shadowAd__select--one {
+    //     transform: scale(1);
+    //     transition: 0.2s;
+    // }  
+
+    // #shadowAd__select--two {
+    //     transform: scale(1);
+    //     transition: 0.2s;
+    // } 
+
+    // #shadowAd__select--three {
+    //     transform: scale(1);
+    //     transition: 0.2s;
+    // } 
+
+    // #shadowAd__select--four {
+    //     transform: scale(1);
+    //     transition: 0.2s;
+    // } 
+
+    // #shadowAd__select--one:hover {
+    //     transform: scale(1.1);
+    //     transition: 0.2s;
+    // }
+
+    // #shadowAd__select--two:hover {
+    //     transform: scale(1.1);
+    //     transition: 0.2s;
+    // }
+
+    // #shadowAd__select--three:hover {
+    //     transform: scale(1.1);
+    //     transition: 0.2s;
+    // }
+
+    // #shadowAd__select--four:hover {
+    //     transform: scale(1.1);
+    //     transition: 0.2s;
+    // }
+
+    @include devider;
+}
+
+
+.wrapper{
+  top: -140px;
+  width: 464px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  left: -4px;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 2px 8px #ccc;
+
+    @include responsive(desktop-xl) {
+      top: -17rem;
+    }
+
+    @include responsive(desktop-lg) {
+      top: -17rem;
+    }
+
+    @include responsive(laptop-md) {
+      top: -13rem;
+      width: 374px;
+      height: 242px;;
+    }
+
+    @include responsive(laptop-xs) {
+      top: -11rem;
+      width: 286px;
+      height: 185px;;
+    }
+
+    @include responsive(tablet-land) {
+      top: -14rem;
+      width: 464px;
+      height: 300px;
+    }
+
+    @include responsive(tablet-port) {
+      top: -13rem;
+      width: 374px;
+      height: 242px;;
+    }
+
+    @include responsive(tablet-port) {
+      top: -10rem;
+      width: 274px;
+      height: 177px;
+    }
+
+    @include responsive(rc-port-340) {
+      top: -8rem;
+      width: 216px;
+      height: 140px;
+    }
+
+    @include responsive(rc-port-298) {
+      top: -7.5rem;
+      width: 216px;
+      height: 140px;
+    }
+
+
+}
+
+
+  /* Our image information */
+
+
+  .before_1,
+  .after_1 {
+    display: block;
+  }
+
+  .before_2,
+  .after_2 {
+    display: none;
+  }
+
+  .before_3,
+  .after_3 {
+    display: none;
+  }
+
+  .before_4,
+  .after_4 {
+    display: none;
+  }
+
+
+  .before,
+  .after {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+  }
+  
+  .content-image{
+    height:100%;
+  }
+  
+  .after{
+    width:125px;
+  }
+  
+  .scroller{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    left:100px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background-color: transparent;
+    opacity:0.9;
+    pointer-events:auto;
+    cursor: grab;
+
+
+  }
+  
+  .scroller:hover{
+    opacity:1;
+  }
+  
+  .scrolling{
+    pointer-events:none;
+    opacity:1;
+    // z-index: 1;
+  }
+  
+  .scroller__thumb{
+    width:100%;
+    height:100%;
+    padding:5px;
+  }
+  
+  .scroller:before,
+  .scroller:after{
+    content:" ";
+    display: block;
+    width: 7px;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    z-index: 30;
+    transition:0.1s;
+
+      @include responsive(laptop-md) {
+        height: 101px;
+      }
+
+      @include responsive(laptop-xs) {
+        height: 73px;
+      }
+
+      @include responsive(tablet-land) {
+        height: 130px;
+      }
+
+      @include responsive(tablet-port) {
+        height: 69px;
+      }
+
+      @include responsive(mobile-port) {
+        height: 69px;
+      }
+
+      @include responsive(rc-port-340) {
+        height: 50px;
+      }
+  }
+  .scroller:before{
+    top:100%;
+  }
+  .scroller:after{
+    bottom:100%;
+  }
+  
+  /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+  .scroller{
+    border: 5px solid #ffc8c8;
+  }
+  .scroller:before,
+  .scroller:after{
+    background: #ffc8c8;
+  }
+
+

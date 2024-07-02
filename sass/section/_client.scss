@@ -1,0 +1,250 @@
+.client, .platform {
+    position: relative;
+    padding: 20rem 0rem;
+    background-color: $white-color;
+
+    &__imageSlider {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+
+
+        &:hover &--slide {
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+
+
+        // &::before, &::after {
+        //     position: absolute;
+        //     top: 0;
+        //     content: "";
+        //     width: 20rem;
+        //     height: 100%;
+        //     border-radius: 2px;
+        //     z-index: 2;
+        // }
+
+        // &::before {
+        //     left: 0;
+        //     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+
+        // }
+
+        // &::after {
+        //     right: 0;
+        //     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+        // }
+
+        &--slide {
+            display: inline-block;
+            animation: 35s platformSlider infinite linear;
+
+            img {
+                margin: 0 2rem;
+                height: 17.3rem;
+
+                @include responsive(desktop-xl) {
+                    margin: 0 4rem;
+                    height: 20rem;
+                }
+
+                @include responsive(desktop-lg) {
+                    margin: 0 4rem;
+                    height: 19.5rem;
+                }
+
+                @include responsive(desktop-md) {
+                    margin: 0 3rem;
+                    height: 18.5rem;
+                }
+
+                @include responsive(desktop-xs) {
+                    margin: 0 2rem;
+                    height: 17.3rem;
+                }
+
+                @include responsive(laptop-lg) {
+                    margin: 0 1.8rem;
+                    height: 15rem;
+                }
+
+                @include responsive(laptop-md) {
+                    margin: 0 1.6rem;
+                    height: 13.5rem;
+                }
+                
+                @include responsive(laptop-sm) {
+                    margin: 0 1.4rem;
+                    height: 12rem;
+                }
+
+                @include responsive(tablet-land) {
+                    margin: 0 1.2rem;
+                    height: 11rem;
+                }
+
+                @include responsive(mobile-land) {
+                    margin: 0 1rem;
+                    height: 9rem;
+                }
+
+            }
+        }
+
+    }
+
+    &__colorLeft {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 354px;
+        height: 541px;
+        bottom: 0;
+        margin: auto 0;
+        
+            @include responsive(desktop-xl) {
+                top: 13rem;
+            }
+
+            @include responsive(desktop-xxl) {
+                top: 17rem;
+            }
+
+            @include responsive(desktop-lg) {
+                top: 13rem;
+            }
+
+            @include responsive(desktop-md) {
+                top: 10rem;
+            }
+
+            @include responsive(desktop-sm) {
+                top: 9rem;
+            }
+
+            @include responsive(laptop-xl) {
+                top: 6rem;
+            }
+            
+            @include responsive(laptop-xs) {
+                top: 19rem;
+                height: auto;
+            }
+
+            @include responsive(tablet-land) {
+                top: 21rem;
+                height: auto;
+            }
+
+            @include responsive(mobile-land) {
+                top: 23rem;
+                height: auto;
+            }
+
+            @include responsive(mobile-port) {
+                top: 29rem;
+                height: auto;
+            }
+
+        img {
+            width: 100%;
+
+                @include responsive(laptop-xs) {
+                    width: 70%;
+                }
+
+                @include responsive(tablet-land) {
+                    width: 60%;
+                }
+
+                @include responsive(mobile-land) {
+                    width: 50%;
+                }
+
+                @include responsive(mobile-port) {
+                    width: 30%;
+                }
+        }
+    }
+
+    &__colorRight {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 375px;
+        height: 541px;
+        bottom: 0;
+        margin: auto 0;
+
+            @include responsive(desktop-xl) {
+                top: 13rem;
+            }
+
+            @include responsive(desktop-xxl) {
+                top: 17rem;
+            }
+
+            @include responsive(desktop-lg) {
+                top: 13rem;
+            }
+
+            @include responsive(desktop-md) {
+                top: 10rem;
+            }
+
+            @include responsive(desktop-sm) {
+                top: 9rem;
+            }
+
+            @include responsive(laptop-xl) {
+                top: 6rem;
+            }
+            
+            @include responsive(laptop-xs) {
+                top: 19rem;
+                right: -11.2rem;
+                height: auto;
+            }
+
+            @include responsive(tablet-land) {
+                top: 21rem;
+                height: auto;
+                right: -15rem;
+            }
+
+            @include responsive(mobile-land) {
+                top: 23rem;
+                height: auto;
+                right: -19rem;
+            }
+
+            @include responsive(mobile-port) {
+                top: 29rem;
+                height: auto;
+                right: -26.3rem;
+            }
+
+        img {
+            width: 100%;
+
+                @include responsive(laptop-xs) {
+                    width: 70%;
+                }
+
+                @include responsive(tablet-land) {
+                    width: 60%;
+                }
+
+                @include responsive(mobile-land) {
+                    width: 50%;
+                }
+
+                @include responsive(mobile-port) {
+                    width: 30%;
+                }
+        }
+    }
+
+    @include devider;
+}

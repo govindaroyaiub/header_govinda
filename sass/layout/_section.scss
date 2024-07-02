@@ -1,0 +1,406 @@
+main {
+    scroll-behavior: smooth;
+}
+
+
+
+// Showreel section
+
+.showreel {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+
+    @include responsive(laptop-lg) {
+      width: 85%;
+    }
+
+    @include responsive(tablet-land) {
+      width: 82%;
+    }
+
+    @include responsive(mobile-land) {
+      width: 85%;
+    }
+
+    @include responsive(mobile-port) {
+      width: 90%;
+    }
+
+    &__bg {
+        width: 100%;
+
+        &--content {
+            width: 100%;
+        }
+    }
+}
+
+
+
+// About Section
+
+.about {
+  padding: 10rem 20rem;
+
+    @include responsive(desktop-xl) {
+      height: auto;
+    }
+
+    @include responsive(desktop-xxl) {
+        height: auto;
+    }
+
+    @include responsive(desktop-lg) {
+        height: auto;
+    }
+
+    @include responsive(laptop-xl) {
+        height: auto
+    }
+
+    @include responsive(laptop-lg) {
+        padding: 10rem 15rem;
+    }
+
+    @include responsive(laptop-md) {
+        padding: 10rem 12rem;
+    }
+
+    @include responsive(laptop-sm) {
+        padding: 10rem 10rem;
+        height: auto
+    }
+
+    @include responsive(laptop-xs) {
+        padding: 10rem 8rem;
+        margin-top: 0rem;
+        height: auto
+    }
+
+    @include responsive(tablet-land) {
+        padding: 5rem 8rem;
+        height: auto;
+    }
+
+    @include responsive(mobile-land) {
+        padding: 5rem 3rem;
+        height: auto;
+    }
+
+    @include responsive(mobile-port) {
+        padding: 3.5rem 2rem;
+        height: auto;
+    }
+
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+      @include responsive(tablet-land) {
+        flex-direction: column;
+        text-align: center;
+      } 
+  }
+
+  &__imagePart {
+    width: 48%;
+
+      @include responsive(tablet-land) {
+        width: 100%;
+        order: 2;
+      } 
+
+    img {
+      width: 80%;
+    }
+  }
+
+  &__textPart {
+    
+    width: 48%;
+
+      @include responsive(tablet-land) {
+        width: 100%;
+        order: 1;
+        margin-bottom: 5rem;
+      } 
+
+      &--heading {
+        background-image: url('../assets/Rich_media.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 120%;
+      }
+  }
+
+  @include devider;
+}
+
+
+
+
+
+// Quote Section
+
+.quote {
+  padding: 8rem 0;
+  text-align: center;
+  // background: linear-gradient(to top, white, #caf3e5);
+
+  &__container {
+      max-width: 170rem;
+      padding: 0 10rem;
+      margin: 0 auto;
+
+      @include responsive(mobile-port) {
+        padding: 0 2rem;
+      }
+  }
+
+  &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &--left, &--right, &--middle {
+          margin-bottom: 6rem;
+      }
+
+      &--middle {
+        align-items: center;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1220px;
+        justify-content: space-evenly;
+        align-self: center;
+        color: #000;
+
+          @include responsive(laptop-sm) {
+            max-width: 1120px;
+          }
+
+          @include responsive(laptop-xs) {
+            max-width: 1060px;
+            font-size: 15px;
+          }
+
+          @include responsive(tablet-land) {
+            max-width: 720px;
+            font-size: 15px;
+          }
+
+          @include responsive(tablet-port) {
+            max-width: 560px;
+            font-size: 15px;
+          }
+
+          @include responsive(mobile-land) {
+            max-width: 368px;
+            font-size: 15px;
+          }
+
+          @include responsive(mobile-port) {
+            max-width: 368px;
+            font-size: 15px;
+          }
+
+          @include responsive(rc-port-340) {
+            max-width: 380px;
+            font-size: 14px;
+            display: block;
+          }
+
+        img {
+          width: 24px;
+          margin-right: 5px;
+
+            @include responsive(rc-port-340) {
+              display: block;
+            }
+        }
+
+        &__email, &__phoneTaco, &__phoneChris, &__location, &__vat, &__kvk {
+          display: flex;
+          align-items: center;
+
+          @include responsive(mobile-port) {
+            align-items: start;
+          }
+
+          @include responsive(rc-port-340) {
+            display: block;
+          }
+        }
+
+        &__email img, &__phoneTaco img, &__phoneChris img, &__location img, &__vat img, &__kvk img {
+          @include responsive(rc-port-340) {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        &__email {
+          margin-bottom: 3rem;
+        }
+
+        &__phoneTaco {
+          margin-bottom: 3rem;
+
+          img {
+            width: 20px;
+          }
+        }
+
+        &__phoneChris {
+          margin-bottom: 3rem;
+
+          img {
+            width: 20px;
+          }
+        }
+
+        &__location {
+          @include responsive(mobile-land) {
+            align-items: start;
+          }
+        }
+
+        &__vat {
+
+          @include responsive(tablet-land) {
+            margin-top: 3rem;
+          }
+
+        }
+
+        &__kvk {
+
+          @include responsive(laptop-sm) {
+            margin-top: 3rem;
+          }
+          
+        }
+      }
+  }
+
+  @include devider;
+
+}
+
+.menuLink li {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+}
+
+.menuLink li:last-child {
+  margin-right: 0rem;
+}
+
+.menuLink li a {
+    
+  @include responsive(tablet-port) {
+    font-size: 1.9rem;
+  }
+
+  @include responsive(mobile-land) {
+    font-size: 1.8rem;
+  }
+}
+
+.socialLink {
+  margin-left: -3rem;
+}
+
+.socialLink li {
+  position: relative;
+  display: inline-block;
+  margin-right: 6rem;
+}
+
+.socialLink li:last-child {
+  margin-right: 0;
+}
+
+.socialLink__facebook {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  background-image: url('../assets/facebook.png');
+}
+
+.socialLink__facebook:hover {
+  background-image: url('../assets/facebook_hover.png');
+  transition: 0.2s;
+}
+
+.socialLink__whatsapp {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  background-image: url('../assets/whatsapp.png');
+}
+
+.socialLink__whatsapp:hover {
+  background-image: url('../assets/whatsapp_hover.png');
+  transition: 0.2s;
+}
+
+.socialLink__linkedin {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  background-image: url('../assets/linkedIn.png');
+}
+
+.socialLink__linkedin:hover {
+  background-image: url('../assets/linkedIn_hover.png');
+  transition: 0.2s;
+}
+
+
+// Quote
+
+// .ml-form-embedContent {
+//   display: none;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .ml-field-group input {
+//   border-radius: 9rem !important;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p, #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+//   text-align: center !important;
+//   font-family: 'Montserrat', sans-serif !important;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+//   font-family: 'Montserrat', sans-serif !important;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4, #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+//   font-family: 'Montserrat', sans-serif !important;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+//   width: 40% !important;
+//   margin: 0 auto !important;
+//   float: none !important;
+// }
+
+// #mlb2-9925705.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
+//   border-radius: 9rem !important;
+// }

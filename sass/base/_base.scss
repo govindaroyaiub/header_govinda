@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    // background-color: $light-gray-color;
+    color: $black-color;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    visibility: hidden;
+
+    @include responsive(desktop-xl) {
+      font-size: 81.25%;  //13px/16px = 0.8125px
+    }
+
+    @include responsive(desktop-lg) {
+      font-size: 75%;  //12px/16px = 0.75px
+    }
+
+    @include responsive(desktop-md) {
+      font-size: 75%;  //12px/16px = 0.75px
+    }
+
+    @include responsive(desktop-sm) {
+      font-size: 68.75%;  //11px/16px = 0.6875px
+    }
+
+    @include responsive(desktop-xs) {
+      font-size: 62.5%;  //10px/16px = 0.625px
+    }
+
+    @include responsive(laptop-lg) {
+      font-size: 62.5%;  //10px/16px = 0.625px
+    }
+
+    @include responsive(laptop-md) {
+      font-size: 56.25%;  //9px/16px = 0.5625px
+    }
+
+    @include responsive(laptop-sm) {
+      font-size: 56.25%;  //9px/16px = 0.5625px
+    }
+
+    @include responsive(tablet-land) {
+      font-size: 50%;  //8px/16px = 0.50px
+    }
+
+    @include responsive(tablet-port) {
+      font-size: 50%;  //8px/16px = 0.50px
+    }
+
+    @include responsive(mobile-land) {
+      font-size: 43.75%;  //7px/16px = 0.4375px
+    }
+
+    @include responsive(mobile-port) {
+      font-size: 43.75%;  //7px/16px = 0.4375px
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $light-gray-color; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: $brand-color;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $brand-color-light; 
+  }

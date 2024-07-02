@@ -1,0 +1,358 @@
+
+.displayAd {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+    margin-bottom: 10rem;
+    height: 100vh;
+    background-color: $white-color;
+
+      @include responsive(desktop-xl) {
+          height: auto;
+          padding-top: 19rem;
+      }
+
+      @include responsive(desktop-xxl) {
+          height: auto;
+          padding-top: 19rem;
+      }
+
+      @include responsive(desktop-lg) {
+          height: auto;
+          padding-top: 19rem;
+      }
+
+      @include responsive(laptop-xl) {
+        height: 100vh;
+        padding: 0 20rem;
+        padding-top: 19rem;
+      }
+
+      @include responsive(laptop-lg) {
+        height: 100vh;
+        padding: 0 15rem;
+        padding-top: 19rem;
+      }
+      
+      @include responsive(laptop-md) {
+        padding: 10rem 12rem;
+        margin-bottom: 0;
+      }
+
+      @include responsive(laptop-sm) {
+          padding: 10rem 10rem;
+          height: auto;
+          margin-bottom: 0;
+      }
+
+      @include responsive(laptop-xs) {
+          padding: 10rem 8rem;
+          margin-top: 0rem;
+          height: auto;
+      }
+
+      @include responsive(mobile-land) {
+        padding: 10rem 3rem;
+        margin-top: 0rem;
+        height: auto;
+      }
+
+      @include responsive(mobile-port) {
+        padding: 3.5rem 2rem;
+        height: auto;
+      }
+
+      @include responsive(rc-port-340) {
+        padding: 3.5rem 2rem;
+        height: auto;
+      }
+      
+      @include responsive(rc-port-298) {
+        padding: 3.5rem 1rem;
+        height: auto;
+      }
+
+    &__images {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        // display: inline-block;
+        background-image: url('../assets/Display_ads.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% -7%;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;     
+        
+          @include responsive(tablet-land) {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            text-align: center;
+          }
+
+          @include responsive(rc-port-340) {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            text-align: center;
+            width: 100%;
+          }
+
+    }
+
+    .row_2 {
+        height: 550px;
+    }
+
+
+    &__col1   {
+      @include responsive(tablet-land) {
+        order: 2;
+        width: 100%;
+        margin-top: 13rem;
+      }
+
+      @include responsive(mobile-land) {
+        order: 1;
+        width: 100%;
+        margin-top: 0rem;
+        margin-bottom: 5rem;
+      }
+
+      @include responsive(mobile-port) {
+        width: 100%;
+      }
+
+      @include responsive(rc-port-340) {
+        width: 100%;
+      }
+      
+    }
+
+    &__col2 {
+        display: flex;
+        justify-content: end;
+
+          @include responsive(tablet-land) {
+              justify-content: center;
+              width: 100%;
+              order: 1;
+          }
+          
+          @include responsive(mobile-land) {
+            justify-content: center;
+            width: 100%;
+            order: 2;
+          } 
+
+          @include responsive(mobile-port) {
+            width: 100%;
+          }
+
+          @include responsive(rc-port-340) {
+            width: 100%;
+          }
+    }
+
+    @include devider;
+
+}
+
+.wraps {
+  @include responsive(mobile-land) {
+    display: none!important;
+  } 
+}
+
+
+// iframe {
+//     border: 0px solid #fff;
+// }
+
+
+// .swiper-container {
+//     width: 300px;
+//     height: 250px;
+// }
+
+// .displayAd__swiper--bg {
+//     position: absolute;
+// }
+
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    background-image: url('../assets/cover.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: 33% 100%;
+
+      @include responsive(rc-port-340) {
+        display: none !important;
+      }
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    background-image: url('../assets/cover.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: 90% 100%;
+
+      @include responsive(rc-port-340) {
+        display: none !important;
+      }
+}
+
+.loaderSwipe {
+    width: 8px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    left: -40px;
+    position: relative;
+    border-radius: 4px;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite alternate;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 20px 0 rgba(76, 79, 109, 0.25), 40px 0 rgba(239, 87, 40, 0.25), 60px 0 rgba(140, 210, 208, 0.25);
+    }
+  
+    50% {
+      box-shadow: 20px 0 rgba(76, 79, 109, 0.25), 40px 0 rgba(239, 87, 40, 0.25), 60px 0 rgba(140, 210, 208, 0.25);
+    }
+  
+    100% {
+      box-shadow: 20px 0 rgba(76, 79, 109, 0.25), 40px 0 rgba(239, 87, 40, 0.25), 60px 0 rgba(140, 210, 208, 0.25);
+    }
+  }
+  
+  .swiper-3d .swiper-slide-shadow-top {
+    opacity: 0 !important;
+  }
+  
+  .swiper-3d .swiper-slide-shadow-bottom {
+    opacity: 0 !important;
+  }
+  
+  .iframe-container-div::after {
+    content: "";
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    min-height: 1px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .swiper-slide{
+    border: 2px solid grey;
+  }
+  
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom,-40px);
+  }
+
+  .swiper-pagination-bullet:nth-child(1){
+    background-image: url("../assets/bullet1.png")!important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-pagination-bullet:nth-child(2){
+    background-image: url("../assets/bullet2.png")!important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-pagination-bullet:nth-child(3){
+    background-image: url("../assets/bullet3.png")!important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-pagination-bullet:nth-child(4){
+    background-image: url("../assets/bullet4.png")!important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-pagination-bullet-active:nth-child(1){
+    background-image: url("../assets/bullet1_active.png")!important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 46px;
+    /* height: 8px; */
+    border-radius: 10px;
+  }
+  
+  .swiper-pagination-bullet-active:nth-child(2){
+    background-image: url("../assets/bullet2_active.png")!important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 46px;
+    /* height: 8px; */
+    border-radius: 10px;
+  }
+  
+  .swiper-pagination-bullet-active:nth-child(3){
+    background-image: url("../assets/bullet3_active.png")!important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 46px;
+    /* height: 8px; */
+    border-radius: 10px;
+  }
+  
+  .swiper-pagination-bullet-active:nth-child(4){
+    background-image: url("../assets/bullet4_active.png")!important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 46px!important;
+    height: 8px;
+    border-radius: 10px;
+  }
+  

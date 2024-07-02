@@ -1,0 +1,430 @@
+
+.weboramaAd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10rem 10rem;
+    height: 100vh;
+    background-color: $white-color;
+
+      @include responsive(desktop-xl) {
+        height: auto;
+        padding: 15rem 10rem;
+        padding-bottom: 18rem;
+      }
+
+      @include responsive(desktop-xxl) {
+        height: auto;
+        padding: 15rem 10rem;
+        padding-bottom: 18rem;
+      }
+
+      @include responsive(desktop-lg) {
+        height: auto;
+        padding: 15rem 10rem;
+        padding-bottom: 18rem;
+      }
+
+      @include responsive(laptop-xl) {
+        height: 100vh;
+        padding: 15rem 20rem;
+      }
+
+      @include responsive(laptop-lg) {
+        padding: 10rem 15rem;
+      }
+
+      @include responsive(laptop-md) {
+        padding: 10rem 12rem;
+      }
+
+      @include responsive(laptop-sm) {
+        padding: 10rem 10rem;
+        height: 80vh;
+      }
+
+      @include responsive(laptop-xs) {
+          padding: 10rem 8rem;
+          height: 61vh;
+          padding-bottom: 12rem;
+      }
+
+      @include responsive(tablet-land) {
+        padding: 5rem 8rem;
+        margin-top: 0rem;
+        padding-bottom: 8rem;
+        height: auto;
+      }
+
+      @include responsive(mobile-land) {
+        padding: 5rem 3rem;
+        margin-top: 0rem;
+        padding-bottom: 8rem;
+        height: auto;
+      }
+
+      @include responsive(mobile-port) {
+        padding: 3.5rem 2rem;
+        margin-top: 0rem;
+        padding-bottom: 8rem;
+        height: auto;
+      }
+
+
+    &__head {
+      transform: translate(20%, 15%);
+      opacity: 0;
+    }
+    
+    &__row {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+
+        @include responsive(tablet-land) {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          text-align: center;
+        }
+
+        @include responsive(mobile-port) {
+            min-height: auto;
+            justify-content: center;
+        }
+    }
+
+    &__col1 {
+      width: 47%;
+
+        @include responsive(desktop-xl) {
+          margin-right: 5rem;
+        }
+
+        @include responsive(desktop-xxl) {
+          margin-right: 5rem;
+        }
+
+        @include responsive(tablet-land) {
+          width: 100%;
+          margin-bottom: 3rem;
+        }
+
+        @include responsive(mobile-port) {
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+
+        
+    }
+
+    &__col2 {
+        width: 50%;
+
+          @include responsive(tablet-land) {
+            width: 100%;
+          }
+
+          @include responsive(mobile-port) {
+              width: 100%;
+          }
+    }
+
+    &__heading {
+        background-image: url('../assets/Rich_media.jpg');
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 120%;
+    }
+
+
+    &__bg {
+
+        min-width: 400px;
+        margin-bottom: 2rem;
+
+          @include responsive(mobile-port) {
+            min-width: 14rem;
+          }
+
+          @include responsive(rc-port-340) {
+            min-width: 14rem;
+          }
+
+          @include responsive(rc-port-298) {
+            min-width: 14rem;
+          }
+
+        &--content {
+          width: 120%;
+          margin-left: 2%;
+          object-fit: cover;
+          clip-path: inset(1px);
+          outline: none;
+          border: 1px solid #fff;
+
+            @include responsive(tablet-land) {
+              width: 90%;
+              margin-left: 7%;
+            }
+
+            @include responsive(mobile-land) {
+              width: 100%;
+              margin-left: 2%;
+            }
+
+            @include responsive(mobile-port) {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            @include responsive(rc-port-340) {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            @include responsive(rc-port-298) {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+    }
+
+    &__devicesWrap {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      margin-left: 9%;
+
+        @include responsive(tablet-land) {
+          margin-left: 0rem;
+        }
+
+    }
+
+    &__devices {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 400px;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0;
+
+
+        @include responsive(rc-port-340) {
+          width: 30rem;
+        }
+
+        @include responsive(rc-port-298) {
+          width: 23rem;
+        }
+
+
+
+      &--apto {
+        width: 33.33%;
+        background: linear-gradient(41deg, #f3cac7, #7d91ab);
+        color: #000000;
+        border: 1px solid #555;
+        text-align: center;
+        border-radius: 4rem;
+        padding: 6px 10px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-right: 2rem;
+
+          @include responsive(rc-port-298) {
+            font-size: 11px;
+          }
+      }
+
+      &--interstial {
+        width: 33.33%;
+        background: linear-gradient(41deg, #ffffff, #ffffff);
+        color: #000000;
+        border: 1px solid #555;
+        text-align: center;
+        border-radius: 4rem;
+        padding: 6px 10px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-right: 2rem;
+
+          @include responsive(rc-port-298) {
+            font-size: 11px;
+          }
+      }
+
+      &--swipeCube {
+        width: 33.33%;
+        background: linear-gradient(41deg, #ffffff, #ffffff);
+        color: #000000;
+        border: 1px solid #555;
+        text-align: center;
+        border-radius: 4rem;
+        padding: 6px 10px;
+        font-size: 13px;
+        font-weight: 600;
+
+          @include responsive(rc-port-298) {
+            font-size: 11px;
+            padding: 6px;
+          }
+      }
+
+      &--apto, &--interstial, &--swipeCube {
+        &::after {
+          content: "";
+          background-image: url('../assets/shadow_btn2.png');
+          background-size: contain;
+          display: block;
+          height: 100%;
+          // width: 30.33%;
+          width: 29.6%;
+          position: absolute;
+          border: 1px solid #555;
+          border-radius: 4rem;
+          top: 0px;
+          left: 0;
+          z-index: -1;
+          transform: translate(5px, 5px);
+
+            @include responsive(rc-port-340) {
+              width: 27.2%;
+            }
+          
+        }
+      }
+
+      &--apto {
+        &::after {
+          @include responsive(rc-port-340) {
+            background-image: url('../assets/shadow_btn3.png');
+            width: 27.1%;
+          }
+
+          @include responsive(rc-port-298) {
+            width: 23.1%;
+          }
+        }
+      }
+
+      &--interstial {
+        &::after {
+
+          @include responsive(rc-port-340) {
+            background-image: url('../assets/shadow_btn3.png');
+            width: 27%;
+          }
+
+          @include responsive(rc-port-298) {
+            width: 31%;
+          }
+
+        }
+      }
+
+      &--swipeCube {
+        &::after {
+
+          @include responsive(rc-port-340) {
+            background-image: url('../assets/shadow_btn3.png');
+            width: 31.2%;
+          }
+
+          @include responsive(rc-port-298) {
+            width: 31.6%;
+          }
+
+        }
+      }
+
+      &--apto {
+        &::after {
+          left: 0;
+
+            @include responsive(rc-port-298) {
+              left: -9px;
+            }
+        }
+      }
+
+      &--interstial {
+        &::after {
+          left: 140px;
+
+            @include responsive(rc-port-340) {
+              left: 102px;
+            }
+
+            @include responsive(rc-port-298) {
+              left: 66px;
+            }
+        }
+      }
+      
+      &--swipeCube {
+        &::after {
+          left: 280px;
+
+            @include responsive(rc-port-340) {
+              left: 205px;
+            }
+
+            @include responsive(rc-port-298) {
+              left: 160px;
+            }
+        }
+      }
+
+
+
+      
+    }
+
+
+    // &__devices {
+    //   display: flex;
+    //   flex-direction: row;
+    //   width: 60px;
+    //   height: 60px;
+    //   justify-content: space-between;
+    //   margin: 0 auto;
+    //   margin-left: 61%;
+    //   cursor: pointer;
+
+    //   img {
+    //     width: 100%;
+    //   }
+    // }
+
+
+    @include devider;
+
+}
+
+.video-one {
+  display: block;
+}
+
+.video-two {
+  display: none;
+}
+
+.video-three {
+  display: none;
+}
+

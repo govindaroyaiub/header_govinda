@@ -1,0 +1,292 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+// @mixin devider {
+//     &__devider {
+//         position: relative;
+//         height: 10px;
+//         width: 90%;
+//         margin: 0 auto;
+  
+//         &--left {
+//           position: absolute;
+//           right: 52%;
+//           background-color: #8185b4;
+//           height: 0.1rem;
+//           width: 0%;
+//         }
+  
+//         &--middle {
+//           position: absolute;
+//           top: -0.4rem;
+//           left: 0;
+//           right: 0;
+//           background: linear-gradient(to right, #aec5c6, #a68572, #c399a7, #aec5c6, #85435a, #263b53, #aec5c6);
+//           width: 20px;
+//           height: 20px;
+//           border-radius: 0% 100% 100% 100%;
+//           margin: 0 auto;
+//           transform: translateY(-140px) rotate(45deg);
+//           transform-origin: center;
+//           opacity: 0;
+//         }
+  
+//         &--right {
+//           position: absolute;
+//           left: 52%;
+//           background-color: #8185b4;
+//           height: 0.1rem;
+//           width: 0%;
+//         }
+//       }
+// }
+
+
+@mixin devider {
+  &__devider {
+      position: relative;
+      height: 10px;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+
+      &--leftOverlay {
+        position: absolute;
+        top: 0;
+        width: 48.5%;
+        left: 0;
+        height: 1rem;
+        background-color: #ffffff;
+        z-index: 1;
+
+          // @include responsive(tablet-land) {
+          //   width: 47.5%;
+          // }
+
+          // @include responsive(mobile-land) {
+          //   width: 45.5%;
+          // }
+      }
+
+      &--rightOverlay {
+        position: absolute;
+        top: 0;
+        width: 48.5%;
+        right: 0;
+        height: 1rem;
+        background-color: #ffffff;
+        z-index: 1;
+
+          // @include responsive(tablet-land) {
+          //   width: 47.5%;
+          // }
+
+          // @include responsive(mobile-land) {
+          //   width: 45.5%;
+          // }
+      }
+
+      &--left {
+        position: absolute;
+        top: 0;
+        left: -69rem;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+
+          @include responsive(laptop-md) {
+            left: -60rem;
+            width: 54rem;
+          }
+
+          @include responsive(laptop-sm) {
+            left: -52rem;
+            width: 46rem;
+            top: 3px;
+          }
+
+          @include responsive(laptop-xs) {
+            left: -45rem;
+            width: 39rem;
+            top: 3px;
+          }
+
+          @include responsive(tablet-land) {
+            left: -42rem;
+            width: 36rem;
+            top: 3px;
+          }
+
+          @include responsive(tablet-port) {
+            left: -35rem;
+            width: 29rem;
+            top: 3px;
+          }
+
+          @include responsive(mobile-land) {
+            left: -27rem;
+            width: 21rem;
+            top: 5px;
+          }
+      }
+
+      &--middle { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center;
+        z-index: 3;
+      }
+
+      &--right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -69rem;
+        margin: 0 auto;
+        opacity: 0;
+
+          @include responsive(laptop-md) {
+            right: -60rem;
+            width: 54rem;
+          }
+
+          @include responsive(laptop-sm) {
+            right: -52rem;
+            width: 46rem;
+            top: 3px;
+          }
+
+          @include responsive(laptop-xs) {
+            right: -45rem;
+            width: 39rem;
+            top: 3px;
+          }
+
+          @include responsive(tablet-land) {
+            right: -42rem;
+            width: 36rem;
+            top: 3px;
+          }
+
+          @include responsive(tablet-port) {
+            right: -35rem;
+            width: 29rem;
+            top: 3px;
+          }
+
+          @include responsive(mobile-land) {
+            right: -27rem;
+            width: 21rem;
+            top: 5px;
+          }
+      }
+  }
+  
+}
+
+
+
+
+// Media Queries
+
+//  rc-port-298 298 - 339
+//  rc-port-340 340 - 438
+//  Mobile-Port 0 - 575
+//  Mobile-Land 576 - 768
+//  Tablet-Port 769 - 900
+//  Tablet-Land 901 - 1025
+//  Laptop-xs   1026 - 1200
+//  Laptop-sm   1201 - 1400
+//  Laptop-md   1401 - 1600
+//  Laptop-lg   1601 - 1800
+//  Laptop-xl     1801 - 2100 (my device)
+//  Desktop-xs     2101 - 2500
+//  Desktop-sm     2501 - 2900
+//  Desktop-md     2901 - 3300
+//  Desktop-lg     3301 - 4000
+//  Desktop-xl     4001 - 7000
+// Desktop-xxl     7001
+
+
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint == rc-port-298 {
+    @media (max-width: 21.1875em) { @content }
+  }
+
+  @if $breakpoint == rc-port-340 {
+    @media (max-width: 27.375em) { @content }
+  }
+
+  @if $breakpoint == mobile-port {
+    @media (max-width: 35.9375em) { @content }
+  }
+
+  @if $breakpoint == mobile-land {
+    @media (max-width: 48em) { @content }
+  }
+
+  @if $breakpoint == tablet-port {
+    @media (max-width: 56.25em) { @content }
+  }
+
+  @if $breakpoint == tablet-land {
+    @media (max-width: 64.0625em) { @content }
+  }
+
+  @if $breakpoint == laptop-xs {
+    @media (max-width: 75em) { @content }
+  }
+
+  @if $breakpoint == laptop-sm {
+    @media (max-width: 87.5em) { @content }
+  }
+
+  @if $breakpoint == laptop-md {
+    @media (max-width: 100em) { @content }
+  }
+
+  @if $breakpoint == laptop-lg {
+    @media (max-width: 112.5em) { @content }
+  }
+
+  @if $breakpoint == laptop-xl {
+    @media (max-width: 131.25em) { @content }
+  }
+
+  @if $breakpoint == desktop-xs {
+    @media (max-width: 156.25em) { @content }
+  }
+
+  @if $breakpoint == desktop-sm {
+    @media (max-width: 181.25em) { @content }
+  }
+
+  @if $breakpoint == desktop-md {
+    @media (max-width: 206.25em) { @content }
+  }
+
+  @if $breakpoint == desktop-lg {
+    @media (max-width: 250em) { @content }
+  }
+
+  @if $breakpoint == desktop-xl {
+    @media (min-width: 250.0625em) { @content }
+  }
+
+  @if $breakpoint == desktop-xxl {
+    @media (min-width: 437.5625em) { @content }
+  }
+}
