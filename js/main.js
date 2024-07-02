@@ -1615,7 +1615,7 @@ document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
-    document.getElementById('loader').style.display = 'none';
+    // document.getElementById('loader').style.opacity = '0';
     document.getElementById('allContents').style.display = 'block';
     $('.header__masking').addClass('mask-layer-animation');
     headerAnimations();
