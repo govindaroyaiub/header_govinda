@@ -1,5 +1,517 @@
-var screenWidth = window.innerWidth;
-console.log(screenWidth)
+// Devider Animation
+
+gsap.registerPlugin(ScrollTrigger);
+
+var clientDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".client",
+    start: "top 19%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+clientDevider
+  .add('clD')
+  .to(".client__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".client__devider--left, .client__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".client__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".client__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+
+var displayAdDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".displayAd",
+    start: "top 0%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+displayAdDevider
+  .add('clD')
+  .to(".displayAd__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".displayAd__devider--left, .displayAd__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".displayAd__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".displayAd__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+var dynamicAdDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".dynamicAd",
+    start: "top 0%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+dynamicAdDevider
+  .add('clD')
+  .to(".dynamicAd__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".dynamicAd__devider--left, .dynamicAd__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".dynamicAd__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".dynamicAd__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+var weboramaAdDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".weboramaAd",
+    start: "top 0%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+weboramaAdDevider
+  .add('clD')
+  .to(".weboramaAd__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".weboramaAd__devider--left, .weboramaAd__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".weboramaAd__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".weboramaAd__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+var platformDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".platform",
+    start: "top 18%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+platformDevider
+  .add('clD')
+  .to(".platform__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".platform__devider--left, .platform__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".platform__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".platform__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+var aboutDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 18%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+aboutDevider
+  .add('clD')
+  .to(".about__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".about__devider--left, .about__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".about__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".about__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+var quoteDevider = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".quote",
+    start: "top 40%",
+    // end: "top center",
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+quoteDevider
+  .add('clD')
+  .to(".quote__devider--middle", {
+    duration: 0.7,
+    scale: 1,
+    opacity: 1,
+    ease: 'power2.out'
+  }, 'clD')
+
+  .to(".quote__devider--left, .quote__devider--right", {
+    duration: 0.1,
+    opacity: 1
+  }, 'clD')
+
+  .add('cLR')
+
+  .to(".quote__devider--leftOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+  .to(".quote__devider--rightOverlay", {
+    duration: 0.6,
+    width: '0%',
+    ease: 'power2.out'
+  }, 'cLR')
+
+gsap.to(".displayAd__heading", {
+  backgroundPosition: "100% 100%",
+  scrollTrigger: {
+    trigger: ".displayAd",
+    start: "top 70vh",
+    end: "top -50vh",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+
+gsap.to(".dynamicAd__heading", {
+  backgroundPosition: "100% 30%",
+  scrollTrigger: {
+    trigger: ".dynamicAd",
+    start: "top 70vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+
+gsap.to(".weboramaAd__heading", {
+  backgroundPosition: "100% -35%",
+  scrollTrigger: {
+    trigger: ".weboramaAd",
+    start: "top 90vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+});
+gsap.to(".shadowAd__heading", {
+  backgroundPosition: "100% -5%",
+  scrollTrigger: {
+    trigger: ".shadowAd",
+    start: "top 90vh",
+    end: "top -500px",
+    scrub: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+
+// Work Horizontal Animation
+
+const allImage = document.querySelector('.work__imageWrap--item');
+const imgWidth = 336 + 20;
+const imageQuantity = 11;
+
+let allImageWidth = imgWidth * imageQuantity;
+
+let amountToScroll = allImageWidth - window.innerWidth;
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+var tl = gsap.timeline({})
+
+tl
+  .to('.displayAd', {
+    delay: 0.1,
+    scrollTrigger: {
+      trigger: ".displayAd",
+      // snap: 0.5,
+      // markers: true,
+      // scrub: 1
+    },
+    ease: 'expo.out'
+  })
+
+  .to('.dynamicAd', {
+    scrollTrigger: {
+      trigger: ".dynamicAd",
+      // snap: 0.5,
+      // markers: true,
+      // scrub: 1
+    },
+    ease: 'expo.out'
+  })
+
+  .to('.shadowAd', {
+    scrollTrigger: {
+      trigger: ".shadowAd",
+      // snap: 0.5,
+      // scrub: 1
+    },
+    ease: 'expo.out'
+  })
+
+
+gsap.from(".displayAd__head", {
+  x: '20%',
+  y: '15%',
+  stagger: 0.2,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".displayAd",
+    start: "top center",
+    // end: "top 30vh",
+    // scrub: true,
+    toggleActions: "play none none none",
+  },
+
+});
+
+var dynamicTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".dynamicAd",
+    start: "top center",
+    end: "top center",
+    // scrub: true,
+    toggleActions: "play none none none",
+  }
+})
+
+dynamicTl
+  .from(".dynamicAd__head", {
+    x: '20%',
+    y: '15%',
+    stagger: 0.2,
+    opacity: 0,
+  })
+
+  .to(".dynamicAd__images--one__dot", {
+    duration: 0.3,
+    opacity: 1,
+    stagger: 0.1,
+    ease: 'power2.out'
+  })
+  .to(".dynamicAd__ams--arrow", {
+    duration: 0.2,
+    opacity: 1,
+    ease: 'power2.out'
+  }, '-=0.1')
+  .to(".dynamicAd__ams--pic", {
+    duration: 0.4,
+    opacity: 1,
+    rotationY: 0,
+    ease: 'power2.inOut'
+  }, '-=0.1')
+
+  .to(".dynamicAd__images--two__dot", {
+    duration: 0.3,
+    opacity: 1,
+    stagger: 0.1,
+    ease: 'power2.out'
+  }, '-=0.1')
+  .to(".dynamicAd__rot--arrow", {
+    duration: 0.2,
+    opacity: 1,
+    ease: 'power2.out'
+  }, '-=0.1')
+  .to(".dynamicAd__rot--pic", {
+    duration: 0.4,
+    opacity: 1,
+    rotationY: 0,
+    ease: 'power2.inOut'
+  }, '-=0.1')
+
+  .to(".dynamicAd__images--three__dot", {
+    duration: 0.3,
+    opacity: 1,
+    stagger: 0.1,
+    ease: 'power2.out'
+  }, '-=0.1')
+  .to(".dynamicAd__den--arrow", {
+    duration: 0.2,
+    opacity: 1,
+    ease: 'power2.out'
+  }, '-=0.1')
+  .to(".dynamicAd__den--pic", {
+    duration: 0.4,
+    opacity: 1,
+    rotationY: 0,
+    ease: 'power2.inOut'
+  }, '-=0.1')
+
+let video = document.querySelector('.weboramaAd__bg--content');
+
+video.pause();
+
+function videoPlayPause() {
+  if (!video.play()) {
+    video.play()
+  } else {
+    video.play()
+  }
+}
+
+var weboramaAdTl = gsap.timeline({
+
+  scrollTrigger: {
+    trigger: ".weboramaAd",
+    start: "top center",
+    // end: "top 30vh",
+    // scrub: true,
+    toggleActions: "restart none none none",
+  }
+})
+
+weboramaAdTl
+  .to(".weboramaAd__head", {
+    x: 0,
+    y: 0,
+    stagger: 0.2,
+    opacity: 1,
+    onComplete: videoPlayPause
+  })
+
+  .to(".weboramaAd__devices", {
+    stagger: 0.2,
+    opacity: 1
+  })
+
+var shadowAdTl = gsap.timeline({
+
+  scrollTrigger: {
+    trigger: ".shadowAd",
+    start: "top center",
+    // end: "top 30vh",
+    // scrub: true,
+    // toggleActions: "restart none none none",
+  }
+})
+
+gsap.to(".header__text", {
+  backgroundPosition: "100% -10%",
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top top",
+    // end: "bottom center",
+    scrub: true,
+    // markers: true,
+    toggleActions: "restart none none none",
+  }
+});
 
 function parallaxEffectColor() {
   const elements = document.querySelectorAll('.parallaxColor');
@@ -304,7 +816,7 @@ function swiperFunction() {
   });
 }
 
-function mediaQueryFunctions() {
+function mediaQueryFunctions(screenWidth) {
   if (screenWidth > 1600) {
     shadowAdTl
       .from(".shadowAd__head", {
@@ -1082,6 +1594,23 @@ function displayAdsFunction() {
   })
 }
 
+$(window).on('load', function () {
+  var screenWidth = window.innerWidth;
+  console.log(screenWidth);
+  mediaQueryFunctions(screenWidth);
+});
+
+$(window).resize(function () {
+  var screenWidth = window.innerWidth;
+  console.log(screenWidth);
+  mediaQueryFunctions(screenWidth);
+});
+
+$(window).scroll(function () {
+  parallaxEffectColor();
+  parallaxEffectBlackAndWhite();
+});
+
 document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
@@ -1094,525 +1623,5 @@ document.addEventListener('readystatechange', function () {
     mediaQueryFunctions();
     richMediaFunctions();
     displayAdsFunction();
-  }
-});
-
-$(window).scroll(function () {
-  parallaxEffectColor();
-  parallaxEffectBlackAndWhite();
-});
-
-// Devider Animation
-
-gsap.registerPlugin(ScrollTrigger);
-
-var clientDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".client",
-    start: "top 19%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-clientDevider
-  .add('clD')
-  .to(".client__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".client__devider--left, .client__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".client__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".client__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-
-var displayAdDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".displayAd",
-    start: "top 0%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-displayAdDevider
-  .add('clD')
-  .to(".displayAd__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".displayAd__devider--left, .displayAd__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".displayAd__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".displayAd__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-var dynamicAdDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".dynamicAd",
-    start: "top 0%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-dynamicAdDevider
-  .add('clD')
-  .to(".dynamicAd__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".dynamicAd__devider--left, .dynamicAd__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".dynamicAd__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".dynamicAd__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-var weboramaAdDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".weboramaAd",
-    start: "top 0%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-weboramaAdDevider
-  .add('clD')
-  .to(".weboramaAd__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".weboramaAd__devider--left, .weboramaAd__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".weboramaAd__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".weboramaAd__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-var platformDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".platform",
-    start: "top 18%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-platformDevider
-  .add('clD')
-  .to(".platform__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".platform__devider--left, .platform__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".platform__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".platform__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-var aboutDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".about",
-    start: "top 18%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-aboutDevider
-  .add('clD')
-  .to(".about__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".about__devider--left, .about__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".about__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".about__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-var quoteDevider = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".quote",
-    start: "top 40%",
-    // end: "top center",
-    // markers: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-quoteDevider
-  .add('clD')
-  .to(".quote__devider--middle", {
-    duration: 0.7,
-    scale: 1,
-    opacity: 1,
-    ease: 'power2.out'
-  }, 'clD')
-
-  .to(".quote__devider--left, .quote__devider--right", {
-    duration: 0.1,
-    opacity: 1
-  }, 'clD')
-
-  .add('cLR')
-
-  .to(".quote__devider--leftOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-  .to(".quote__devider--rightOverlay", {
-    duration: 0.6,
-    width: '0%',
-    ease: 'power2.out'
-  }, 'cLR')
-
-gsap.to(".displayAd__heading", {
-  backgroundPosition: "100% 100%",
-  scrollTrigger: {
-    trigger: ".displayAd",
-    start: "top 70vh",
-    end: "top -50vh",
-    scrub: true,
-    toggleActions: "restart none none none",
-  }
-});
-
-gsap.to(".dynamicAd__heading", {
-  backgroundPosition: "100% 30%",
-  scrollTrigger: {
-    trigger: ".dynamicAd",
-    start: "top 70vh",
-    end: "top -500px",
-    scrub: true,
-    toggleActions: "restart none none none",
-  }
-});
-
-gsap.to(".weboramaAd__heading", {
-  backgroundPosition: "100% -35%",
-  scrollTrigger: {
-    trigger: ".weboramaAd",
-    start: "top 90vh",
-    end: "top -500px",
-    scrub: true,
-    toggleActions: "restart none none none",
-  }
-});
-gsap.to(".shadowAd__heading", {
-  backgroundPosition: "100% -5%",
-  scrollTrigger: {
-    trigger: ".shadowAd",
-    start: "top 90vh",
-    end: "top -500px",
-    scrub: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-
-// Work Horizontal Animation
-
-const allImage = document.querySelector('.work__imageWrap--item');
-const imgWidth = 336 + 20;
-const imageQuantity = 11;
-
-let allImageWidth = imgWidth * imageQuantity;
-
-let amountToScroll = allImageWidth - window.innerWidth;
-
-const lenis = new Lenis();
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-var tl = gsap.timeline({})
-
-tl
-  .to('.displayAd', {
-    delay: 0.1,
-    scrollTrigger: {
-      trigger: ".displayAd",
-      // snap: 0.5,
-      // markers: true,
-      // scrub: 1
-    },
-    ease: 'expo.out'
-  })
-
-  .to('.dynamicAd', {
-    scrollTrigger: {
-      trigger: ".dynamicAd",
-      // snap: 0.5,
-      // markers: true,
-      // scrub: 1
-    },
-    ease: 'expo.out'
-  })
-
-  .to('.shadowAd', {
-    scrollTrigger: {
-      trigger: ".shadowAd",
-      // snap: 0.5,
-      // scrub: 1
-    },
-    ease: 'expo.out'
-  })
-
-
-gsap.from(".displayAd__head", {
-  x: '20%',
-  y: '15%',
-  stagger: 0.2,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".displayAd",
-    start: "top center",
-    // end: "top 30vh",
-    // scrub: true,
-    toggleActions: "play none none none",
-  },
-
-});
-
-var dynamicTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".dynamicAd",
-    start: "top center",
-    end: "top center",
-    // scrub: true,
-    toggleActions: "play none none none",
-  }
-})
-
-dynamicTl
-  .from(".dynamicAd__head", {
-    x: '20%',
-    y: '15%',
-    stagger: 0.2,
-    opacity: 0,
-  })
-
-  .to(".dynamicAd__images--one__dot", {
-    duration: 0.3,
-    opacity: 1,
-    stagger: 0.1,
-    ease: 'power2.out'
-  })
-  .to(".dynamicAd__ams--arrow", {
-    duration: 0.2,
-    opacity: 1,
-    ease: 'power2.out'
-  }, '-=0.1')
-  .to(".dynamicAd__ams--pic", {
-    duration: 0.4,
-    opacity: 1,
-    rotationY: 0,
-    ease: 'power2.inOut'
-  }, '-=0.1')
-
-  .to(".dynamicAd__images--two__dot", {
-    duration: 0.3,
-    opacity: 1,
-    stagger: 0.1,
-    ease: 'power2.out'
-  }, '-=0.1')
-  .to(".dynamicAd__rot--arrow", {
-    duration: 0.2,
-    opacity: 1,
-    ease: 'power2.out'
-  }, '-=0.1')
-  .to(".dynamicAd__rot--pic", {
-    duration: 0.4,
-    opacity: 1,
-    rotationY: 0,
-    ease: 'power2.inOut'
-  }, '-=0.1')
-
-  .to(".dynamicAd__images--three__dot", {
-    duration: 0.3,
-    opacity: 1,
-    stagger: 0.1,
-    ease: 'power2.out'
-  }, '-=0.1')
-  .to(".dynamicAd__den--arrow", {
-    duration: 0.2,
-    opacity: 1,
-    ease: 'power2.out'
-  }, '-=0.1')
-  .to(".dynamicAd__den--pic", {
-    duration: 0.4,
-    opacity: 1,
-    rotationY: 0,
-    ease: 'power2.inOut'
-  }, '-=0.1')
-
-let video = document.querySelector('.weboramaAd__bg--content');
-
-video.pause();
-
-function videoPlayPause() {
-  if (!video.play()) {
-    video.play()
-  } else {
-    video.play()
-  }
-}
-
-var weboramaAdTl = gsap.timeline({
-
-  scrollTrigger: {
-    trigger: ".weboramaAd",
-    start: "top center",
-    // end: "top 30vh",
-    // scrub: true,
-    toggleActions: "restart none none none",
-  }
-})
-
-weboramaAdTl
-  .to(".weboramaAd__head", {
-    x: 0,
-    y: 0,
-    stagger: 0.2,
-    opacity: 1,
-    onComplete: videoPlayPause
-  })
-
-  .to(".weboramaAd__devices", {
-    stagger: 0.2,
-    opacity: 1
-  })
-
-var shadowAdTl = gsap.timeline({
-
-  scrollTrigger: {
-    trigger: ".shadowAd",
-    start: "top center",
-    // end: "top 30vh",
-    // scrub: true,
-    // toggleActions: "restart none none none",
-  }
-})
-
-gsap.to(".header__text", {
-  backgroundPosition: "100% -10%",
-  scrollTrigger: {
-    trigger: ".header",
-    start: "top top",
-    // end: "bottom center",
-    scrub: true,
-    // markers: true,
-    toggleActions: "restart none none none",
   }
 });
