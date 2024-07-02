@@ -158,8 +158,8 @@ function headerParallaxEffect(){
     let tHeader2 = gsap.timeline({})
     tHeader2
       .to('#cloud2', {
-        duration: 20,
-        x: 80,
+        duration: 30,
+        x: 150,
         ease: "none"
       })
   }
