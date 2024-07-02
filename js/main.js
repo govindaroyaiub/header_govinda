@@ -1,72 +1,72 @@
-function parallaxEffectColor(){
+function parallaxEffectColor() {
   const elements = document.querySelectorAll('.parallaxColor');
   const scrollPosition = window.scrollY;
 
   elements.forEach(element => {
-      const direction = element.getAttribute('data-direction');
-      const speed = parseFloat(element.getAttribute('data-speed'));
-      const max = parseFloat(element.getAttribute('data-max'));
-      
-      let newValue = scrollPosition * speed;
+    const direction = element.getAttribute('data-direction');
+    const speed = parseFloat(element.getAttribute('data-speed'));
+    const max = parseFloat(element.getAttribute('data-max'));
 
-      if (speed > 0 && newValue > max) {
-          newValue = max;
-      } else if (speed < 0 && newValue < max) {
-          newValue = max;
-      }
+    let newValue = scrollPosition * speed;
 
-      if (direction === 'left') {
-          element.style.marginLeft = newValue + 'px';
-      } else if (direction === 'right') {
-          element.style.marginRight = newValue + 'px';
-      } else if (direction === 'top') {
-          element.style.marginTop = newValue + 'px';
-      } else if (direction === 'bottom') {
-          element.style.marginBottom = newValue + 'px';
-      }
+    if (speed > 0 && newValue > max) {
+      newValue = max;
+    } else if (speed < 0 && newValue < max) {
+      newValue = max;
+    }
+
+    if (direction === 'left') {
+      element.style.marginLeft = newValue + 'px';
+    } else if (direction === 'right') {
+      element.style.marginRight = newValue + 'px';
+    } else if (direction === 'top') {
+      element.style.marginTop = newValue + 'px';
+    } else if (direction === 'bottom') {
+      element.style.marginBottom = newValue + 'px';
+    }
   });
 }
 
-function parallaxEffectBlackAndWhite(){
+function parallaxEffectBlackAndWhite() {
   const elements = document.querySelectorAll('.parallaxBW');
   const scrollPosition = window.scrollY;
 
   elements.forEach(element => {
-      const direction = element.getAttribute('data-direction');
-      const speed = parseFloat(element.getAttribute('data-speed'));
-      const max = parseFloat(element.getAttribute('data-max'));
-      
-      let newValue = scrollPosition * speed;
+    const direction = element.getAttribute('data-direction');
+    const speed = parseFloat(element.getAttribute('data-speed'));
+    const max = parseFloat(element.getAttribute('data-max'));
 
-      if (speed > 0 && newValue > max) {
-          newValue = max;
-      } else if (speed < 0 && newValue < max) {
-          newValue = max;
-      }
+    let newValue = scrollPosition * speed;
 
-      if (direction === 'left') {
-          element.style.marginLeft = newValue + 'px';
-      } else if (direction === 'right') {
-          element.style.marginRight = newValue + 'px';
-      } else if (direction === 'top') {
-          element.style.marginTop = newValue + 'px';
-      } else if (direction === 'bottom') {
-          element.style.marginBottom = newValue + 'px';
-      }
+    if (speed > 0 && newValue > max) {
+      newValue = max;
+    } else if (speed < 0 && newValue < max) {
+      newValue = max;
+    }
+
+    if (direction === 'left') {
+      element.style.marginLeft = newValue + 'px';
+    } else if (direction === 'right') {
+      element.style.marginRight = newValue + 'px';
+    } else if (direction === 'top') {
+      element.style.marginTop = newValue + 'px';
+    } else if (direction === 'bottom') {
+      element.style.marginBottom = newValue + 'px';
+    }
   });
 }
 
-function headerAnimations(){
+function headerAnimations() {
   let tHeader = gsap.timeline({})
+  let tHeader2 = gsap.timeline({})
+  tHeader2
+    .to('#cloud2', {
+      duration: 30,
+      x: 150,
+      ease: "none"
+    }, "+=1");
 
   tHeader
-    .add('head')
-    .to('.header__paralax', {
-      duration: 0,
-      ease: "none",
-      onComplete: cloudAnimation
-    }, 'head')
-
     .add('flow', '+=2')
     .to(small_flower, {
       duration: 2,
@@ -210,17 +210,6 @@ function headerAnimations(){
       rotationZ: 0,
       ease: "none"
     }, 'flow9')
-
-
-  function cloudAnimation() {
-    let tHeader2 = gsap.timeline({})
-    tHeader2
-      .to('#cloud2', {
-        duration: 30,
-        x: 150,
-        ease: "none"
-      }, "+=1")
-  }
 }
 
 document.addEventListener('readystatechange', function () {
@@ -370,39 +359,6 @@ clientDevider
     ease: 'power2.out'
   }, 'cLR')
 
-// clientDevider
-// .add('clD')
-// .to(".client__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".client__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".client__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-// .to(".client__devider--left", {
-//   duration: 1,
-//   width: "48%",
-// }, 'clD+=0.3')
-
-// .to(".client__devider--right", {
-//   duration: 1,
-//   width: "48%",
-// }, 'clD+=0.3')
-
 
 var displayAdDevider = gsap.timeline({
   scrollTrigger: {
@@ -442,32 +398,6 @@ displayAdDevider
     ease: 'power2.out'
   }, 'cLR')
 
-// displayAdDevider
-// .add('clD')
-// .to(".displayAd__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".displayAd__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".displayAd__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-
-
-
 var dynamicAdDevider = gsap.timeline({
   scrollTrigger: {
     trigger: ".dynamicAd",
@@ -505,31 +435,6 @@ dynamicAdDevider
     width: '0%',
     ease: 'power2.out'
   }, 'cLR')
-
-// dynamicAdDevider
-// .add('clD')
-// .to(".dynamicAd__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".dynamicAd__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".dynamicAd__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-
 
 var weboramaAdDevider = gsap.timeline({
   scrollTrigger: {
@@ -569,32 +474,6 @@ weboramaAdDevider
     ease: 'power2.out'
   }, 'cLR')
 
-// weboramaAdDevider
-// .add('clD')
-// .to(".weboramaAd__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".weboramaAd__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".weboramaAd__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-
-
-
 var platformDevider = gsap.timeline({
   scrollTrigger: {
     trigger: ".platform",
@@ -632,32 +511,6 @@ platformDevider
     width: '0%',
     ease: 'power2.out'
   }, 'cLR')
-
-// platformDevider
-// .add('clD')
-// .to(".platform__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".platform__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".platform__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-
-
 
 var aboutDevider = gsap.timeline({
   scrollTrigger: {
@@ -697,30 +550,6 @@ aboutDevider
     ease: 'power2.out'
   }, 'cLR')
 
-// aboutDevider
-// .add('clD')
-// .to(".about__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".about__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".about__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-
 var quoteDevider = gsap.timeline({
   scrollTrigger: {
     trigger: ".quote",
@@ -759,56 +588,6 @@ quoteDevider
     ease: 'power2.out'
   }, 'cLR')
 
-// quoteDevider
-// .add('clD')
-// .to(".quote__devider--middle", {
-//   duration: 0.7,
-//   y: 0,
-//   opacity: 1,
-//   ease: 'power2.in'
-// }, 'clD')
-
-// .to(".quote__devider--middle", {
-//   duration: 0,
-//   rotation: 0,
-//   borderRadius: 0,
-//   height: 5
-// })
-
-// .to(".quote__devider--middle", {
-//   duration: 0.3,
-//   width: '100%',
-//   borderRadius: '100%',
-
-// })
-
-// var shadowAdDevider = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".shadowAd",
-//     start: "top 0%",
-//     toggleActions: "restart none none none",
-//   }
-// })
-
-// shadowAdDevider
-// .add('clD')
-// .to(".shadowAd__devider--middle", {
-//   duration: 0.3,
-//   scale: 1,
-// }, 'clD')
-
-// .to(".shadowAd__devider--left", {
-//   duration: 1,
-//   width: "48%",
-// }, 'clD+=0.3')
-
-// .to(".shadowAd__devider--right", {
-//   duration: 1,
-//   width: "48%",
-// }, 'clD+=0.3')
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 // Work Horizontal Animation
@@ -821,23 +600,6 @@ let allImageWidth = imgWidth * imageQuantity;
 
 let amountToScroll = allImageWidth - window.innerWidth;
 
-// console.log(allImageWidth);
-// console.log(amountToScroll);
-// console.log(window.innerWidth);
-
-// gsap.to(allImage, {
-//     x: -amountToScroll,
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: ".work",
-//         start: "top 0px",
-//         // end: "bottom 20px",
-//         // snap: 0.3,
-//         pin: true,
-//         scrub: 1,
-//     }
-// })
-
 const lenis = new Lenis();
 
 function raf(time) {
@@ -846,11 +608,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-// Ads Section Snap Animation 
-
-
-
 
 var tl = gsap.timeline({})
 
@@ -919,11 +676,6 @@ dynamicTl
     opacity: 0,
   })
 
-
-  // gsap.from(".dynamicAd__head", {
-
-
-  // });
   .to(".dynamicAd__images--one__dot", {
     duration: 0.3,
     opacity: 1,
@@ -977,10 +729,6 @@ dynamicTl
     rotationY: 0,
     ease: 'power2.inOut'
   }, '-=0.1')
-
-
-
-
 
 let video = document.querySelector('.weboramaAd__bg--content');
 
@@ -1038,9 +786,6 @@ var shadowAdTl = gsap.timeline({
 })
 
 if (screenWidth > 1600) {
-
-
-
   shadowAdTl
     .from(".shadowAd__head", {
       duration: 0.5,
@@ -1381,22 +1126,6 @@ if (screenWidth > 1600) {
     }, 'sc2')
 }
 
-
-// gsap.to('.weboramaAd', { duration: 2, scrollTo: 250 });
-// var t3 = gsap.timeline({})
-
-// .to('.workflow__reveal--content', {
-//     scrollTrigger: {
-//         trigger: ".workflow",
-//         start: "bottom 30px",
-//         // snap: 0.5,
-//         // scrub: 1
-//     },
-//     height: b,
-//     ease: 'expo.out',
-
-// })
-
 gsap.to(".header__text", {
   backgroundPosition: "100% -10%",
   scrollTrigger: {
@@ -1460,43 +1189,6 @@ gsap.to(".shadowAd__heading", {
 })
 
 
-
-
-// Video Button Control
-
-
-
-
-
-
-// const revealDiv = document.querySelector('.workflow__reveal--content');
-
-// let revealDivheight = revealDiv.clientHeight;
-// let reveal = revealDivheight - window.innerHeight;
-
-// console.log(revealDivheight)
-// console.log(reveal)
-
-
-// let amountToScrolld = allImageWidth - window.innerWidth;
-
-
-
-// $(document).ready(function(){
-
-//     var content = $('.workflow__reveal--content');
-//     var contentHeight = content.height();
-
-//     $(window).scroll(function(){
-
-//         var scrollTop = $(this).scrollTop();
-//         // if((scrollTop > 1000)) {
-//             content.height(contentHeight - scrollTop);
-//         // }
-//     });
-// });
-
-
 // Weborama Devices
 
 let apto = document.getElementById('apto');
@@ -1512,15 +1204,9 @@ apto.addEventListener('click', function () {
   videoOne.style.display = "block";
   videoTwo.style.display = "none";
   videoThree.style.display = "none";
-
   apto.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
   interstial.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
   swipeCubeWeb.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
-
-  // apto.style.color = "#ffffff";
-  // interstial.style.color = "#000000"
-  // swipeCubeWeb.style.color = "#000000"
-
   videoOne.currentTime = 0;
 
 })
@@ -1529,14 +1215,9 @@ interstial.addEventListener('click', function () {
   videoOne.style.display = "none";
   videoTwo.style.display = "block";
   videoThree.style.display = "none";
-
   apto.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
   interstial.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
   swipeCubeWeb.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
-
-  // apto.style.color = "#000000";
-  // interstial.style.color = "#ffffff"
-  // swipeCubeWeb.style.color = "#000000"
 
   videoTwo.currentTime = 0;
 
@@ -1546,25 +1227,12 @@ swipeCubeWeb.addEventListener('click', function () {
   videoOne.style.display = "none";
   videoTwo.style.display = "none";
   videoThree.style.display = "block";
-
   apto.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
   interstial.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
   swipeCubeWeb.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
-
-  // apto.style.color = "#000000";
-  // interstial.style.color = "#000000"
-  // swipeCubeWeb.style.color = "#ffffff"
   videoThree.currentTime = 0;
 
 })
-
-
-
-
-
-
-
-
 
 let active = false;
 
@@ -1581,8 +1249,6 @@ var afterTwo = document.getElementsByClassName('after_2');
 var beforeThree = document.getElementsByClassName('before_3');
 var afterThree = document.getElementsByClassName('after_3');
 
-
-
 selectOne.addEventListener('click', function () {
 
   beforeOne[0].style.display = "block";
@@ -1595,21 +1261,11 @@ selectOne.addEventListener('click', function () {
   selectOne.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
   selectTwo.style.background = "#fff";
   selectThree.style.background = "#fff";
-
-  // selectOne.style.color = "#fff";
-  // selectTwo.style.color = "black";
-  // selectThree.style.color = "black";
-
   selectOne.style.border = 'none';
   selectTwo.style.border = "1px solid #000";
   selectThree.style.border = "1px solid #000";
-
-
-
-
   document.querySelector(".after_1").style.width = "50%";
   document.querySelector(".scroller").style.left = "45%";
-
 });
 
 selectTwo.addEventListener('click', function () {
@@ -1624,10 +1280,6 @@ selectTwo.addEventListener('click', function () {
   selectOne.style.background = "#fff";
   selectTwo.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
   selectThree.style.background = "#fff";
-
-  // selectOne.style.color = "black";
-  // selectTwo.style.color = "#fff";
-  // selectThree.style.color = "black";
 
   selectOne.style.border = '1px solid #000';
   selectTwo.style.border = "none";
@@ -1649,10 +1301,6 @@ selectThree.addEventListener('click', function () {
   selectOne.style.background = "#fff";
   selectTwo.style.background = "#fff";
   selectThree.style.background = "linear-gradient(41deg, rgb(243 202 199), rgb(125 145 171))";
-
-  // selectOne.style.color = "black";
-  // selectTwo.style.color = "black";
-  // selectThree.style.color = "#fff";
 
   selectOne.style.border = '1px solid #000';
   selectTwo.style.border = "1px solid #000";
@@ -1784,15 +1432,6 @@ document.body.addEventListener("touchcancel", function () {
   document.querySelector(".scroller").classList.remove("scrolling");
 });
 
-
-
-
-
-
-
-
-
-
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(Draggable)
 
@@ -1889,9 +1528,6 @@ SHIFTS.forEach((BOX, index) => {
       0
     )
   LOOP.add(BOX_TL, index * STAGGER)
-
-
-  // console.log(BOX.firstChild)
 
 })
 
@@ -2003,10 +1639,6 @@ gsap.set('.box', {
   display: 'block'
 })
 
-// gsap.set('button', {
-//   z: 200,
-// })
-
 Draggable.create('.drag-proxy', {
   type: 'x',
   trigger: '.box',
@@ -2016,24 +1648,8 @@ Draggable.create('.drag-proxy', {
   onDrag() {
     SCRUB.vars.position = this.startOffset + (this.startX - this.x) * 0.001
     SCRUB.invalidate().restart() // same thing as we do in the ScrollTrigger's onUpdate
-
-    // var boxOne = document.getElementById('boxe');
-
-    // if(boxOne.firstElementChild.style.transform >= 'translate(-110%, -49%)') {
-    //   console.log('true')
-    //   boxOne.firstElementChild.style.scale = '1';
-    // }
-    // console.log('false')
-
-    // console.log(boxOne.firstElementChild.style.transform)
-
   },
   onDragEnd() {
     // scrollToPosition(SCRUB.vars.position)
   },
 })
-
-
-
-
-// })(jQuery);
