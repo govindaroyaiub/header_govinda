@@ -1,61 +1,59 @@
 function parallaxEffectColor(){
-  let planet = document.getElementById('planet1');
-  let big_island = document.getElementById('big_island');
-  let small_island_left = document.getElementById('small_island_left');
-  let small_island = document.getElementById('small_island');
-  let middle_island = document.getElementById('middle_island');
-  let planet2 = document.getElementById('planet2');
-  let grass = document.getElementById('grass');
-  let cloud1 = document.getElementById('cloud1');
-  let cloud2 = document.getElementById('cloud2');
-  let sun = document.getElementById('sun');
-  let header_text = document.getElementById('header__text');
-  let small_flower = document.getElementById('small_flower');
-  let big_flower = document.getElementById('big_flower');
-  let value = window.scrollY;
+  const elements = document.querySelectorAll('.parallaxColor');
+  const scrollPosition = window.scrollY;
 
+  elements.forEach(element => {
+      const direction = element.getAttribute('data-direction');
+      const speed = parseFloat(element.getAttribute('data-speed'));
+      const max = parseFloat(element.getAttribute('data-max'));
+      
+      let newValue = scrollPosition * speed;
 
-  planet.style.marginLeft = value * -0.2 + 'px';
-  big_island.style.marginBottom = value * 0.1 + 'px';
-  small_island.style.marginBottom = value * 0.01 + 'px';
-  small_island_left.style.marginBottom = value * 0.05 + 'px';
-  middle_island.style.marginBottom = value * 0.05 + 'px';
-  planet2.style.marginLeft = value * 0.2 + 'px';
-  // color_cloud.style.marginLeft  = value * -0.25 + 'px';
-  // planet2.style.marginBottom  = value * -0.05 + 'px';
-  planet2.style.transform = "rotateY(20deg)";
-  header_text.style.marginTop = value * 0.45 + 'px';
-  grass.style.marginTop = value * -0.09 + 'px';
-  sun.style.marginBottom = value * 0.3 + 'px';
+      if (speed > 0 && newValue > max) {
+          newValue = max;
+      } else if (speed < 0 && newValue < max) {
+          newValue = max;
+      }
+
+      if (direction === 'left') {
+          element.style.marginLeft = newValue + 'px';
+      } else if (direction === 'right') {
+          element.style.marginRight = newValue + 'px';
+      } else if (direction === 'top') {
+          element.style.marginTop = newValue + 'px';
+      } else if (direction === 'bottom') {
+          element.style.marginBottom = newValue + 'px';
+      }
+  });
 }
 
 function parallaxEffectBlackAndWhite(){
-  let planetBW = document.getElementById('planet1BW');
-  let big_islandBW = document.getElementById('big_islandBW');
-  let small_island_leftBW = document.getElementById('small_island_leftBW');
-  let small_islandBW = document.getElementById('small_islandBW');
-  let middle_islandBW = document.getElementById('middle_islandBW');
-  let planet2BW = document.getElementById('planet2BW');
-  let grassBW = document.getElementById('grassBW');
-  let cloud1BW = document.getElementById('cloud1BW');
-  let cloud2BW = document.getElementById('cloud2BW');
-  let sunBW = document.getElementById('sunBW');
-  let small_flowerBW = document.getElementById('small_flowerBW');
-  let big_flowerBW = document.getElementById('big_flowerBW');
-  let value = window.scrollY;
+  const elements = document.querySelectorAll('.parallaxBW');
+  const scrollPosition = window.scrollY;
 
+  elements.forEach(element => {
+      const direction = element.getAttribute('data-direction');
+      const speed = parseFloat(element.getAttribute('data-speed'));
+      const max = parseFloat(element.getAttribute('data-max'));
+      
+      let newValue = scrollPosition * speed;
 
-  planetBW.style.marginLeft = value * -0.2 + 'px';
-  big_islandBW.style.marginBottom = value * 0.1 + 'px';
-  small_islandBW.style.marginBottom = value * 0.01 + 'px';
-  small_island_leftBW.style.marginBottom = value * 0.05 + 'px';
-  middle_islandBW.style.marginBottom = value * 0.05 + 'px';
-  planet2BW.style.marginLeft = value * 0.2 + 'px';
-  // color_cloud.style.marginLeft  = value * -0.25 + 'px';
-  // planet2.style.marginBottom  = value * -0.05 + 'px';
-  planet2BW.style.transform = "rotateY(20deg)";
-  grassBW.style.marginTop = value * -0.09 + 'px';
-  sunBW.style.marginBottom = value * 0.3 + 'px';
+      if (speed > 0 && newValue > max) {
+          newValue = max;
+      } else if (speed < 0 && newValue < max) {
+          newValue = max;
+      }
+
+      if (direction === 'left') {
+          element.style.marginLeft = newValue + 'px';
+      } else if (direction === 'right') {
+          element.style.marginRight = newValue + 'px';
+      } else if (direction === 'top') {
+          element.style.marginTop = newValue + 'px';
+      } else if (direction === 'bottom') {
+          element.style.marginBottom = newValue + 'px';
+      }
+  });
 }
 
 function headerAnimations(){
@@ -229,7 +227,6 @@ document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
-    // Hide the loading overlay and show the content
     document.getElementById('loader').style.display = 'none';
     document.getElementById('allContents').style.display = 'block';
     $('.header__masking').addClass('mask-layer-animation');
