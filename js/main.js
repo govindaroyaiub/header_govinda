@@ -1,4 +1,4 @@
-function headerParallaxEffect(){
+function headerAnimations(){
   let tHeader = gsap.timeline({})
 
   tHeader
@@ -165,17 +165,7 @@ function headerParallaxEffect(){
   }
 }
 
-document.addEventListener('readystatechange', function () {
-  if (document.readyState === 'complete') {
-    // Hide the loading overlay and show the content
-    document.getElementById('loader').style.display = 'none';
-    document.getElementById('allContents').style.display = 'block';
-    $('.header__masking').addClass('mask-layer-animation');
-    headerParallaxEffect();
-  }
-});
-
-$(window).scroll(function () {
+function parallaxEffect(){
   let planet = document.getElementById('planet1');
   let big_island = document.getElementById('big_island');
   let small_island_left = document.getElementById('small_island_left');
@@ -206,10 +196,20 @@ $(window).scroll(function () {
   header_text.style.marginTop = value * 0.45 + 'px';
   grass.style.marginTop = value * -0.09 + 'px';
   sun.style.marginBottom = value * 0.3 + 'px';
+}
 
-  let flower = gsap.timeline({});
+document.addEventListener('readystatechange', function () {
+  if (document.readyState === 'complete') {
+    // Hide the loading overlay and show the content
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('allContents').style.display = 'block';
+    $('.header__masking').addClass('mask-layer-animation');
+    headerAnimations();
+  }
+});
 
-  flower
+$(window).scroll(function () {
+  parallaxEffect();
 });
 
 
