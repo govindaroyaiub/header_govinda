@@ -1,3 +1,34 @@
+function parallaxEffect(){
+  let planet = document.getElementById('planet1');
+  let big_island = document.getElementById('big_island');
+  let small_island_left = document.getElementById('small_island_left');
+  let small_island = document.getElementById('small_island');
+  let middle_island = document.getElementById('middle_island');
+  let planet2 = document.getElementById('planet2');
+  let grass = document.getElementById('grass');
+  let cloud1 = document.getElementById('cloud1');
+  let cloud2 = document.getElementById('cloud2');
+  let sun = document.getElementById('sun');
+  let header_text = document.getElementById('header__text');
+  let small_flower = document.getElementById('small_flower');
+  let big_flower = document.getElementById('big_flower');
+  let value = window.scrollY;
+
+
+  planet.style.marginLeft = value * -0.2 + 'px';
+  big_island.style.marginBottom = value * 0.1 + 'px';
+  small_island.style.marginBottom = value * 0.01 + 'px';
+  small_island_left.style.marginBottom = value * 0.05 + 'px';
+  middle_island.style.marginBottom = value * 0.05 + 'px';
+  planet2.style.marginLeft = value * 0.2 + 'px';
+  // color_cloud.style.marginLeft  = value * -0.25 + 'px';
+  // planet2.style.marginBottom  = value * -0.05 + 'px';
+  planet2.style.transform = "rotateY(20deg)";
+  header_text.style.marginTop = value * 0.45 + 'px';
+  grass.style.marginTop = value * -0.09 + 'px';
+  sun.style.marginBottom = value * 0.3 + 'px';
+}
+
 function headerAnimations(){
   let tHeader = gsap.timeline({})
 
@@ -161,44 +192,12 @@ function headerAnimations(){
         duration: 30,
         x: 150,
         ease: "none"
-      })
+      }, "+=1")
   }
 }
 
-function parallaxEffect(){
-  let planet = document.getElementById('planet1');
-  let big_island = document.getElementById('big_island');
-  let small_island_left = document.getElementById('small_island_left');
-  let small_island = document.getElementById('small_island');
-  let middle_island = document.getElementById('middle_island');
-  let planet2 = document.getElementById('planet2');
-  let grass = document.getElementById('grass');
-  let cloud1 = document.getElementById('cloud1');
-  let cloud2 = document.getElementById('cloud2');
-  let sun = document.getElementById('sun');
-  let header_text = document.getElementById('header__text');
-  let small_flower = document.querySelector('small_flower');
-  let big_flower = document.querySelector('big_flower');
-
-
-  let value = window.scrollY;
-
-
-  planet.style.marginLeft = value * -0.2 + 'px';
-  big_island.style.marginBottom = value * 0.1 + 'px';
-  small_island.style.marginBottom = value * 0.01 + 'px';
-  small_island_left.style.marginBottom = value * 0.05 + 'px';
-  middle_island.style.marginBottom = value * 0.05 + 'px';
-  planet2.style.marginLeft = value * 0.2 + 'px';
-  // color_cloud.style.marginLeft  = value * -0.25 + 'px';
-  // planet2.style.marginBottom  = value * -0.05 + 'px';
-  planet2.style.transform = "rotateY(20deg)";
-  header_text.style.marginTop = value * 0.45 + 'px';
-  grass.style.marginTop = value * -0.09 + 'px';
-  sun.style.marginBottom = value * 0.3 + 'px';
-}
-
 document.addEventListener('readystatechange', function () {
+  parallaxEffect();
   if (document.readyState === 'complete') {
     // Hide the loading overlay and show the content
     document.getElementById('loader').style.display = 'none';
