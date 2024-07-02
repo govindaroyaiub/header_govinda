@@ -5506,7 +5506,7 @@ main {
 
 .mask-layer-animation .img-bw {
   animation: addColor 1200ms steps(32) forwards;
-  animation-delay: 1s;
+  animation-delay: 5s;
 }
 
 @keyframes addColor {
