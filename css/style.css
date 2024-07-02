@@ -5506,7 +5506,7 @@ main {
 
 .mask-layer-animation .img-bw {
   animation: addColor 1200ms steps(32) forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   -webkit-animation: addColor 1200ms steps(32) forwards;
 }
 
