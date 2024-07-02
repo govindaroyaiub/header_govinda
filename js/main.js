@@ -226,7 +226,7 @@ function headerAnimations(){
 }
 
 document.addEventListener('readystatechange', function () {
-  parallaxEffect();
+  parallaxEffectColor();
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
     // Hide the loading overlay and show the content
