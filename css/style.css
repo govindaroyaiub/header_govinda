@@ -5490,11 +5490,10 @@ main {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://i.ibb.co/QQM2tJR/front.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-mask-image: url(https://i.ibb.co/xGR5019/mask-img.png);
-  mask-image: url(https://i.ibb.co/xGR5019/mask-img.png);
+  -webkit-mask-image:url(https://i.ibb.co/xGR5019/mask-img.png);
+  mask-image:url(https://i.ibb.co/xGR5019/mask-img.png);
   -webkit-mask-position: 0% 0%;
   mask-position: 0% 0%;
   -webkit-mask-size: cover;
@@ -5502,11 +5501,14 @@ main {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   transition: -webkit-mask-position;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 .mask-layer-animation .img-bw {
   animation: addColor 1200ms steps(32) forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  -webkit-animation: addColor 1200ms steps(32) forwards;
 }
 
 @keyframes addColor {
