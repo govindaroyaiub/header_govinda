@@ -1614,6 +1614,7 @@ $(window).scroll(function () {
 document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
+  var loader = document.getElementById('loader');
   if (document.readyState === 'complete') {
     loader.classList.add("hidden");
     setTimeout(function() {
@@ -1624,6 +1625,7 @@ document.addEventListener('readystatechange', function () {
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
     }, 1500);
+
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();

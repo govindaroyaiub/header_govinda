@@ -5505,6 +5505,8 @@ main {
   background-repeat: no-repeat;
   -webkit-mask-image:url(https://i.ibb.co/xGR5019/mask-img.png);
   mask-image:url(https://i.ibb.co/xGR5019/mask-img.png);
+  /* -webkit-mask-image:url(https://i.ibb.co/82YsVr4/masking2.png);
+  mask-image:url(https://i.ibb.co/82YsVr4/masking2.png); */
   -webkit-mask-position: 0% 0%;
   mask-position: 0% 0%;
   -webkit-mask-size: cover;
@@ -5517,8 +5519,8 @@ main {
 }
 
 .mask-layer-animation .img-bw {
-  animation: addColor 1200ms steps(32) forwards;
-  -webkit-animation: addColor 1200ms steps(32) forwards;
+  animation: addColor 1600ms steps(32) forwards;
+  -webkit-animation: addColor 1600ms steps(32) forwards;
 }
 
 @keyframes addColor {
