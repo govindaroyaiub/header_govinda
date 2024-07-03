@@ -5506,7 +5506,6 @@ main {
 
 .mask-layer-animation .img-bw {
   animation: addColor 1200ms steps(32) forwards;
-  animation-delay: 2.5s;
   -webkit-animation: addColor 1200ms steps(32) forwards;
 }
 
@@ -5518,5 +5517,6 @@ main {
   100% {
       -webkit-mask-position: 100% 0;
       mask-position: 100% 0;
+      display: none;
   }
 }

@@ -1615,11 +1615,12 @@ document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
-    console.log('asdasd');
     document.getElementById('loader').style.opacity = '0';
     document.getElementById('loader').style.visibility = 'hidden';
     document.getElementById('allContents').style.visibility = 'visible';
-    $('.header__masking').addClass('mask-layer-animation');
+    setTimeout(function() {
+      $('.header__masking').addClass('mask-layer-animation');
+    }, 2500);
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();
