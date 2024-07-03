@@ -1616,11 +1616,10 @@ document.addEventListener('readystatechange', function () {
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
     document.getElementById('loader').style.opacity = '0';
-    document.getElementById('loader').style.visibility = 'hidden';
     document.getElementById('allContents').style.visibility = 'visible';
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
-    }, 2500);
+    }, 1500);
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();
