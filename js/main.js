@@ -575,7 +575,7 @@ function headerAnimations() {
   let tHeader = gsap.timeline({})
   let tHeader2 = gsap.timeline({})
   tHeader2
-    .to('#cloud2', {
+    .to('.cloud2', {
       duration: 30,
       x: 150,
       ease: "none"
