@@ -1615,11 +1615,14 @@ document.addEventListener('readystatechange', function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
   if (document.readyState === 'complete') {
-    document.getElementById('loader').style.opacity = '0';
-    document.getElementById('allContents').style.visibility = 'visible';
+    loader.classList.add("hidden");
+    setTimeout(function() {
+      document.getElementById('allContents').style.display = 'block';
+      document.body.style.overflow = "auto";
+    }, 500);
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
-    }, 1500);
+    }, 1000);
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();
