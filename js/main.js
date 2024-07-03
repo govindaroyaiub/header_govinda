@@ -1619,10 +1619,11 @@ document.addEventListener('readystatechange', function () {
     setTimeout(function() {
       document.getElementById('allContents').style.display = 'block';
       document.body.style.overflow = "auto";
+      
     }, 500);
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
-    }, 1000);
+    }, 1500);
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();
