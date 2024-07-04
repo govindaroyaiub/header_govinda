@@ -5477,7 +5477,6 @@ main {
 }
 
 .header__text__colored{
-  z-index: 10;
   position: absolute;
   font-size: 5.4rem;
   display: inline-block;
