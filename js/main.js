@@ -1609,6 +1609,9 @@ $(window).resize(function () {
 $(window).scroll(function () {
   parallaxEffectColor();
   parallaxEffectBlackAndWhite();
+  let header_text = document.getElementById('header__text');
+  let value = window.scrollY;
+  header_text.style.marginTop = value * 0.45 + 'px';
 });
 
 document.addEventListener('readystatechange', function () {
