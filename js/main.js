@@ -1625,7 +1625,6 @@ document.addEventListener('readystatechange', function () {
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
     }, 1500);
-
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();

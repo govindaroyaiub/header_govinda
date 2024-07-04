@@ -114,32 +114,6 @@ body {
   background-color: #676b94;
 }
 
-.header__text {
-  position: absolute;
-  font-size: 5.4rem;
-  display: inline-block;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 900;
-  top: 16%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 40%;
-  text-align: center;
-  background-image: url("../assets/cover2.jpg");
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -ms-background-clip: text;
-  color: transparent;
-  letter-spacing: 2px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-}
-
 .primary-text {
   font-size: 6rem;
   display: block;
@@ -956,7 +930,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 22;
 }
 
 .navbar .logo a {
@@ -5484,6 +5458,51 @@ main {
   font-size: 1.6rem;
 }
 
+.header__text__bw {
+  z-index: 21;
+  position: absolute;
+  font-size: 5.4rem;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  top: 16%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: grey;
+}
+
+.header__text__colored{
+  z-index: 10;
+  position: absolute;
+  font-size: 5.4rem;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  top: 16%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  background-image: url("../assets/cover2.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
 .mask-container {
   position: absolute;
   width: 100%;
@@ -5496,7 +5515,7 @@ main {
 }
 
 .img-bw {
-  z-index: 1;
+  z-index: 20;
   display: block;
   position: absolute;
   width: 100%;
@@ -5531,6 +5550,5 @@ main {
   100% {
       -webkit-mask-position: 100% 0;
       mask-position: 100% 0;
-      display: none;
   }
 }
