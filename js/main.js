@@ -1624,7 +1624,7 @@ document.addEventListener('readystatechange', function () {
     }, 500);
     setTimeout(function() {
       $('.header__masking').addClass('mask-layer-animation');
-    }, 1500);
+    }, 700);
     headerAnimations();
     swiperFunction();
     mediaQueryFunctions();
