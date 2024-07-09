@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   color: #000000;
   box-sizing: border-box;
@@ -5523,8 +5523,8 @@ main {
   background-repeat: no-repeat;
   /* -webkit-mask-image:url(https://i.ibb.co/xGR5019/mask-img.png);
   mask-image:url(https://i.ibb.co/xGR5019/mask-img.png); */
-  -webkit-mask-image:url(https://i.ibb.co/82YsVr4/masking2.png);
-  mask-image:url(https://i.ibb.co/82YsVr4/masking2.png);
+  -webkit-mask-image:url(https://i.ibb.co/RGKD7r3/mask-layers.png);
+  mask-image:url(https://i.ibb.co/RGKD7r3/mask-layers.png);
   -webkit-mask-position: 0% 0%;
   mask-position: 0% 0%;
   -webkit-mask-size: cover;
@@ -5537,8 +5537,8 @@ main {
 }
 
 .mask-layer-animation .img-bw {
-  animation: addColor 1600ms steps(26) forwards;
-  -webkit-animation: addColor 1600ms steps(26) forwards;
+  animation: addColor 1400ms steps(23) forwards;
+  -webkit-animation: addColor 1400ms steps(23) forwards;
 }
 
 @keyframes addColor {
